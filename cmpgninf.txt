@@ -1,0 +1,72 @@
+{
+  mapname=map01
+  gamemode=invasion
+  wavelimit=9
+}
+
+
+{
+  mapname=map02
+  gamemode=invasion
+  wavelimit=7
+}
+
+{
+  mapname=map03
+  gamemode=invasion
+  wavelimit=5
+}
+
+{
+  mapname=map04
+  gamemode=invasion
+  wavelimit=9
+}
+
+{
+  mapname=map05
+  gamemode=invasion
+  wavelimit=8
+}
+
+{
+  mapname=map06
+  gamemode=invasion
+  wavelimit=7
+}
+
+{
+  mapname=map07
+  gamemode=invasion
+  wavelimit=10
+}
+
+{
+  mapname=map08
+  gamemode=invasion
+  wavelimit=6
+}
+
+{
+  mapname=map09
+  gamemode=invasion
+  wavelimit=7
+}
+
+{
+  mapname=map10
+  gamemode=invasion
+  wavelimit=11
+}
+
+{
+mapname=map11
+gamemode=invasion
+wavelimit=7
+}
+
+{
+  mapname=map12
+  gamemode=invasion
+  wavelimit=8
+}

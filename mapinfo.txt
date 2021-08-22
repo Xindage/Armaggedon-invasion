@@ -1,0 +1,62 @@
+defaultmap
+evenlighting
+
+map map01 "Something Different"
+sky1 stsky9 0.0
+music D_MAP01
+next map02
+
+map map02 "Hidden temple"
+sky1 stsky9 0.0
+music D_MAP02
+next map03
+
+map map03 "Sand Worm Trench"
+sky1 sky1 0.0
+music CPEACE
+next map04
+
+map map04 "By Day, By Night"
+sky1 stsky9 0.0
+music D_Map04
+next map05
+
+map map05 "Large Hell Collider"
+sky1 sky1 0.0
+music REACT1
+next map06
+
+map map06 "The Weather these days"
+sky1 sky02 0.0
+music D_MAP06
+next map07
+
+map map07 "Space adventure"
+sky1 stsky8 0.0
+music D_MAP07
+next map08
+
+map map08 "The hideout of the cultists"
+sky1 stsky7 0.0
+music D_MAP10
+next map09
+
+map map09 "The Heart of Evil"
+sky1 Stsky8 0.5
+music D_Map09
+next map10
+
+map map10 "The elevator of dimensions"
+music D_MAP08
+next map11
+sky1 stsky6 0.0
+
+map map11 "Ministry of Damnation"
+next map12
+sky1 SAW_SKY1 0.2
+music D_map11
+
+map map12 "Grand Theft Boatmobile"
+music D_MAP12
+next map01
+sky1 sky02 0.0

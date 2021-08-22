@@ -1,0 +1,37 @@
+texture LZRBEAM
+pic LZRBEAM1 rand 1 20
+pic LZRBEAM2 tics 1
+
+texture CORELIT
+pic CORELIT1 tics 1
+pic CORELIT2 tics 1
+pic CORELIT3 tics 1
+pic CORELIT4 tics 1
+
+warp flat SKSNAKE1
+warp flat SKSNAKE2
+
+texture FAMGUY2
+pic FAMGUY2 tics 8
+pic FAMGUY3 tics 8
+pic FAMGUY4 tics 8
+
+texture FLAGZ1
+pic FLAGZ1 tics 8
+pic FLAGZ2 tics 8
+pic FLAGZ3 tics 8
+pic FLAGZ4 tics 8
+pic FLAGZ5 tics 8
+pic FLAGZ6 tics 8
+pic FLAGZ7 tics 8
+pic FLAGZ8 tics 8
+
+texture FLAGY1
+pic FLAGY1 tics 8
+pic FLAGY2 tics 8
+pic FLAGY3 tics 8
+pic FLAGY4 tics 8
+pic FLAGY5 tics 8
+pic FLAGY6 tics 8
+pic FLAGY7 tics 8
+pic FLAGY8 tics 8

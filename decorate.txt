@@ -1,0 +1,2 @@
+#INCLUDE "decorate/dec1.dec"
+#INCLUDE "decorate/dec2.dec"

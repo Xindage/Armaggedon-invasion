@@ -1,0 +1,12 @@
+#library "GLOBAL"
+#include "zcommon.acs"
+
+script 240 (int whatsound)
+{
+if(whatsound==0){
+AmbientSound("icegolemattack",127);
+}
+if(whatsound==1){
+AmbientSound("icebreathattack",127);
+}
+}

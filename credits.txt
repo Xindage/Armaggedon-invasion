@@ -1,0 +1,90 @@
+===========================================================================
+Advanced engine needed  : Skulltag 0.98
+Primary purpose         : Invasion
+===========================================================================
+Title                   : Armageddon 2
+Filename                : armageddon2v63.pk3
+Release date            : 22.07.2011
+Authors                 : 
+				wario
+				Moti
+				CutmanMike
+
+Description             : Pack of 12 Crazy Invasion maps for SkullTag.
+
+Additional Credits to   : 
+Agatho Demon - Jimmy
+Avatar - Eriance
+Cacolich - Bouncy, TheDarkArchon
+Catharsi - Tormentor667
+Cultist - Eriance
+Cyber Baron - Ben2k9
+Cybruiser - Eriance
+Diabloist - Eriance
+Hellsmith - Eriance
+Disciple - Eriance
+Heavysupershotgun sprites - Eriance
+Death knight - Eriance
+Illus - Ghastly Dragon
+Soul Harvester - Tormentor667, Vader
+Zombie Marine - Bouncy
+Bruiser Demon - Vader
+Wolfenstein 3d decorate (partially) - AFADoomer
+Blood decorate  (partially), hires sprites - Doorhenge?
+Might and Magic images - Bouncy
+Supergod ammo - Supergod
+Map04 "Darkening music" - Abaddon
+Map 01 - 06 bosses + various M&M decorate - Cutmanmike
+Gothicdm - Textures
+Additional recourses from Heretic/blood/strife/duke3d/Might and Magic
+Devilhunter, Aiur850, Kongming, Propaganda and Mr. Goth for testing
+===========================================================================
+* What is included *
+
+New levels              : Yes
+Sounds                  : Yes
+Music                   : Yes
+Graphics                : Yes
+Dehacked/BEX Patch      : No
+Demos                   : No
+Other                   : Yes
+Other files required    : None
+
+
+* Play Information *
+
+Game                    : DOOM2
+Map #                   : Map01 - Map12
+Single Player           : No
+Cooperative 2-8 Player  : No
+Deathmatch 2-8 Player   : No
+Other game styles       : Invasion
+Difficulty Settings     : No
+
+
+* Construction *
+
+Base                    : New from scratch
+Build Time              : 4 months, a big break of 2 years, then another month
+Editor(s) used          : Doom Builder, XWE, SLumpEd, Doom Builder 2
+Known Bugs              : Fps drops on some maps.
+May Not Run With...     : EVERYTHING except SkullTag 98
+
+
+* Maps additional info *
+Map01 - Something Different 		by Moti
+Map02 - Hidden Temple			by wario
+Map03 - Sand Worm Trench 		by CutmanMike
+Map04 - By Day, By Night 		by Moti
+Map05 - Large Hell Collider		by CutmanMike
+Map06 - The Weather these days 		by wario
+Map07 - Space Adventure			by wario
+Map08 - The Hideout of the Cultists	by wario
+Map09 - The Heart of Evil		by Moti
+Map10 - The Elevator of Dimensions	by wario
+Map11 - Ministry of Damnation		by Moti and wario
+Map12 - Grand Theft Boatmobile		by wario
+
+* Copyright / Permissions *
+
+Authors may NOT use the maps as a base for modification or reuse.
