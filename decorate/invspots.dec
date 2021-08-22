@@ -1,0 +1,329 @@
+ACTOR DiscipleSpawner : CustomMonsterInvasionSpot 12344
+{
+DropItem Disciple
+}
+
+ACTOR DeathKnightSpawner : CustomMonsterInvasionSpot 13346
+{
+DropItem DeathKnight
+}
+
+actor AscoSpot : CustomMonsterInvasionSpot 10000
+{
+DropItem AssaultCommander
+}
+
+actor EnforcerSpot : CustomMonsterInvasionSpot 10003
+{
+DropItem Enforcer
+}
+
+actor OctopusSpot : CustomMonsterInvasionSpot 10005
+{
+DropItem Octabrain
+}
+
+actor PigcopSpot : CustomMonsterInvasionSpot 10006
+{
+DropItem Pigcop
+}
+
+actor WarlordSpot : CustomMonsterInvasionSpot 10007
+{
+DropItem Battlelord
+}
+
+actor OverlordSpot : CustomMonsterInvasionSpot 10008
+{
+DropItem Overlord
+}
+
+actor CycloidEmperorSpot : CustomMonsterInvasionSpot 10009
+{
+DropItem CycloidEmperor
+}
+
+actor BruiserSpot : CustomMonsterInvasionSpot 12340
+{
+DropItem BruiserDemon
+}
+
+actor AgathoSpot : CustomMonsterInvasionSpot 12341
+{
+DropItem AgathoDemon
+}
+
+actor ZombieMarineSpot : CustomMonsterInvasionSpot 12342
+{
+DropItem ZombieMarine
+}
+
+actor DiabloistSpot : CustomMonsterInvasionSpot 12343
+{
+DropItem Diabloist
+}
+
+actor HellsergeantSpot : CustomMonsterInvasionSpot 10010
+{
+DropItem Hellsergeant
+}
+
+actor KnightDTFSpot : CustomMonsterInvasionSpot 10012
+{
+DropItem KnightDTF
+}
+
+actor SkeletonArcherSpot : CustomMonsterInvasionSpot 12350
+{
+DropItem SkeletonArcher
+}
+
+actor SandDemonSpot : CustomMonsterInvasionSpot 12351
+{
+DropItem SandDemon
+}
+
+actor BruteSpot : CustomMonsterInvasionSpot 12352
+{
+DropItem Brute
+}
+
+actor GolemRiderSpot : CustomMonsterInvasionSpot 12353
+{
+DropItem GolemRider
+}
+
+actor StoneGolemSpot : CustomMonsterInvasionSpot 12354
+{
+DropItem StoneGolem
+}
+
+actor LightningSentrySpot : CustomMonsterInvasionSpot 12361
+{
+DropItem LightningSentry
+}
+
+actor sdorbSentrySpot : CustomMonsterInvasionSpot 12362
+{
+DropItem sdorb
+}
+
+actor SmallermastermindSpot : CustomMonsterInvasionSpot 12364
+{
+DropItem Smallermastermind
+}
+
+actor CybruiserSentrySpot : CustomMonsterInvasionSpot 12363
+{
+DropItem Cybruiser
+}
+
+actor LightningcoreSpot : CustomMonsterInvasionSpot 12365
+{
+DropItem Lightningcore
+}
+
+actor IcedemonSpot : CustomMonsterInvasionSpot 12367
+{
+DropItem Icedemon
+}
+
+actor CrusaderDTFSpot : CustomMonsterInvasionSpot 12369
+{
+DropItem CrusaderDTF
+}
+
+actor ReaverDTFSpot : CustomMonsterInvasionSpot 12370
+{
+DropItem ReaverDTF
+}
+
+actor Inquisitor2Spot : CustomMonsterInvasionSpot 12371
+{
+DropItem Inquisitor2
+}
+
+actor HarvesterSpot : CustomMonsterInvasionSpot 15070
+{
+DropItem SoulHarvester
+}
+
+actor CacolichSpot : CustomMonsterInvasionSpot 15071
+{
+DropItem Cacolich
+}
+
+actor AnubisSpot : CustomMonsterInvasionSpot 15072
+{
+DropItem Anubis
+}
+
+actor EyesoreSpot : CustomMonsterInvasionSpot 12348
+{
+DropItem Eyesore
+}
+
+actor JitterSpot : CustomMonsterInvasionSpot 12349
+{
+DropItem Clowny
+}
+
+ACTOR AvatarSpot : CustomMonsterInvasionSpot 15078
+{
+DropItem Avatar
+}
+
+ACTOR CyberBaronSpot : CustomMonsterInvasionSpot 15099
+{
+DropItem CyberBaron
+}
+
+ACTOR GreaterBaronSpot : CustomMonsterInvasionSpot 15100
+{
+DropItem GreaterBaron
+}
+
+actor IllusSpot : CustomMonsterInvasionSpot 15102
+{
+DropItem Illus
+}
+
+actor GreaterCyberBaronSpot : CustomMonsterInvasionSpot 15103
+{
+DropItem GreaterCyberBaron
+}
+
+actor CyberHellKnightSpot : CustomMonsterInvasionSpot 15104
+{
+DropItem CyberHellKnight
+}
+
+actor CyberBelphegorSpot : CustomMonsterInvasionSpot 15105
+{
+DropItem CyberBelphegor
+}
+
+actor DogSpot : CustomMonsterInvasionSpot 15106
+{
+DropItem Dog
+}
+
+actor BlueNaziSpot : CustomMonsterInvasionSpot 15107
+{
+DropItem BlueNazi
+}
+
+actor BrownNaziSpot : CustomMonsterInvasionSpot 15108
+{
+DropItem BrownNazi
+}
+
+actor DoomImp2Spot : CustomMonsterInvasionSpot 15109
+{
+DropItem DoomImp2
+}
+
+actor Revenant2Spot : CustomMonsterInvasionSpot 15110
+{
+DropItem Revenant2
+}
+
+actor Cybruiser2Spot : CustomMonsterInvasionSpot 15111
+{
+DropItem Cybruiser2
+}
+
+actor sdorb2Spot : CustomMonsterInvasionSpot 15112
+{
+DropItem sdorb2
+}
+
+actor GreyCultistSpot : CustomMonsterInvasionSpot 15113
+{
+DropItem GreyCultist
+}
+
+actor GreenCultistSpot : CustomMonsterInvasionSpot 15114
+{
+DropItem GreenCultist
+}
+
+actor RedCultistSpot : CustomMonsterInvasionSpot 15115
+{
+DropItem RedCultist
+}
+
+actor BlueCultistSpot : CustomMonsterInvasionSpot 15116
+{
+DropItem BlueCultist
+}
+
+actor YellowCultistSpot : CustomMonsterInvasionSpot 15117
+{
+DropItem YellowCultist
+}
+
+actor ThrallSpot : CustomMonsterInvasionSpot 15118
+{
+DropItem Thrall
+}
+
+actor Thrall2Spot : CustomMonsterInvasionSpot 15119
+{
+DropItem Thrall2
+}
+
+actor Thrall3Spot : CustomMonsterInvasionSpot 15120
+{
+DropItem Thrall3
+}
+
+actor Thrall4Spot : CustomMonsterInvasionSpot 15121
+{
+DropItem Thrall4
+}
+
+actor Thrall5Spot : CustomMonsterInvasionSpot 15122
+{
+DropItem Thrall5
+}
+
+ACTOR CatharsiSpot : CustomMonsterInvasionSpot 15735
+{
+DropItem Catharsi
+}
+
+ACTOR WatcherSpot : CustomMonsterInvasionSpot 15736
+{
+DropItem Watcher
+}
+
+ACTOR BoneDragonSpot : CustomMonsterInvasionSpot 15737
+{
+DropItem BoneDragon
+}
+
+actor SeaguardSpot : CustomMonsterInvasionSpot 15738
+{
+DropItem Seaguard
+}
+
+actor Seaguard2Spot : CustomMonsterInvasionSpot 15739
+{
+DropItem Seaguard2
+}
+
+actor ScourgeSpot : CustomMonsterInvasionSpot 15740
+{
+DropItem Scourge
+}
+
+ACTOR MinotaurDTFSpot : CustomMonsterInvasionSpot 15741
+{
+DropItem MinotaurDTF
+}
+
+ACTOR KamikaziSpot : CustomMonsterInvasionSpot 15742
+{
+DropItem KamikaziGuy
+}
