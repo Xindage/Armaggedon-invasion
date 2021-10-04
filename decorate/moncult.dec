@@ -1,616 +1,617 @@
 //Decorate data base of monsters based on blood. (i think?)
 
-ACTOR Thrall 30119 
-{ 
-Health 100
-PainChance 10
-Speed 8 
-Radius 20 
-Height 52 
-Mass 100 
-MONSTER
-+FLOORCLIP
-+DONTHURTSPECIES
--NOGRAVITY
-translation "116:124=176:185"
--FLOAT
-Obituary "%o was killed by a Warlock Cultist."
-AttackSound "monster/culatk"  
-  seesound "shotgut/sight"
-  painsound "shotgut/pain"
-  deathsound "shotgut/death"
-States 
-   { 
-   Spawn: 
-       CULT AB 10 A_Look 
-       Loop 
-   See: 
-       CULT AABBCCDD 2 A_Chase 
-       Loop 
-   Missile:
-       CULT EE 5 A_FaceTarget
-       CULT F 0 Bright A_CustomMissile ("ThrallShot1",42,-6,0,1,0)
-       CULT F 0 Bright A_CustomMissile ("ThrallShot1",42,6,0,1,0)
-       CULT F 8 Bright A_PlaySound("monster/culatk")
-       Goto See
-   Pain: 
-       CULT G 2 
-       CULT G 2 A_Pain 
-       Goto See 
-   Death: 
-       CULT H 8 
-       CULT I 8 A_Scream 
-       CULT J 8 
-       CULT K 8 A_NoBlocking 
-       CULT L 8 
-       CULT M -1 
-       Stop
-   Raise: 
-       CULT MLKJHI 5 
-       Goto See 
-   } 
+ACTOR Thrall
+{
+	Health 100
+	PainChance 10
+	Speed 8
+	Radius 20
+	Height 52
+	Mass 100
+	MONSTER
+	+FLOORCLIP
+	+DONTHURTSPECIES
+	-NOGRAVITY
+	translation "116:124=176:185"
+	-FLOAT
+	Obituary "%o was killed by a Warlock Cultist."
+	AttackSound "monster/culatk"
+	seesound "shotgut/sight"
+	painsound "shotgut/pain"
+	deathsound "shotgut/death"
+	States 
+	{ 
+	Spawn: 
+		CULT AB 10 A_Look 
+		Loop 
+	See: 
+		CULT AABBCCDD 2 A_Chase 
+		Loop 
+	Missile:
+		CULT EE 5 A_FaceTarget
+		CULT F 0 Bright A_CustomMissile ("ThrallShot1",42,-6,0,1,0)
+		CULT F 0 Bright A_CustomMissile ("ThrallShot1",42,6,0,1,0)
+		CULT F 8 Bright A_PlaySound("monster/culatk")
+		Goto See
+	Pain: 
+		CULT G 2 
+		CULT G 2 A_Pain 
+		Goto See 
+	Death: 
+		CULT H 8 
+		CULT I 8 A_Scream 
+		CULT J 8 
+		CULT K 8 A_NoBlocking 
+		CULT L 8 
+		CULT M -1 
+		Stop
+	Raise: 
+		CULT MLKJHI 5 
+		Goto See 
+	} 
+}
+
+ACTOR Thrall2
+{
+	Health 100
+	PainChance 10
+	Speed 8 
+	Radius 20
+	Height 52
+	Mass 100
+	MONSTER
+	+FLOORCLIP
+	+DONTHURTSPECIES
+	translation "116:124=80:90"
+	-NOGRAVITY
+	-FLOAT
+	AttackSound "monster/culatk"
+	seesound "shotgut/sight"
+	painsound "shotgut/pain"
+	deathsound "shotgut/death"
+	States 
+	{ 
+	Spawn: 
+		CULT AB 10 A_Look 
+		Loop
+	See:
+		CULT AABBCCDD 2 A_VileChase
+		Loop
+		Heal:
+		CULT "F" 10 BRIGHT
+		Goto See
+	Pain:
+		CULT G 2
+		CULT G 2 A_Pain
+		Goto See
+	Death:
+		CULT H 8
+		CULT I 8 A_Scream
+		CULT J 8
+		CULT K 8 A_NoBlocking
+		CULT L 8
+		CULT M -1
+		Stop
+	} 
 }
 
 ACTOR Thrall3 : Thrall 30121 
 { 
-translation "116:124=250:254"
-Obituary "%o was killed by a Warlock Cultist."
-States 
-   { 
-   Missile:
-       CULT EE 5 A_FaceTarget
-       CULT F 0 Bright A_CustomMissile ("AvaBall3",42,-6,0,1,0)
-       CULT F 0 Bright A_CustomMissile ("AvaBall3",42,6,0,1,0)
-       CULT F 8 Bright A_PlaySound("weapons/devexp")
-       Goto See
-   } 
+	translation "116:124=250:254"
+	Obituary "%o was killed by a Warlock Cultist."
+	States 
+	{ 
+	Missile:
+		CULT EE 5 A_FaceTarget
+		CULT F 0 Bright A_CustomMissile ("AvaBall3",42,-6,0,1,0)
+		CULT F 0 Bright A_CustomMissile ("AvaBall3",42,6,0,1,0)
+		CULT F 8 Bright A_PlaySound("weapons/devexp")
+		Goto See
+	} 
 }
 
-ACTOR Thrall4 : Thrall 30122 
+ACTOR Thrall4 : Thrall
 { 
-translation "116:124=0:0"
-Obituary "%o was killed by a Warlock Cultist."
-States 
-   { 
-   Missile:
-       CULT EE 5 A_FaceTarget
-       CULT F 0 Bright A_CustomMissile ("IllusBlast",42,-6,0,1,0)
-       CULT F 0 Bright A_CustomMissile ("IllusBlast",42,6,0,1,0)
-       CULT F 8 Bright
-       Goto See
-   } 
+	translation "116:124=0:0"
+	Obituary "%o was killed by a Warlock Cultist."
+	States
+	{ 
+	Missile:
+		CULT EE 5 A_FaceTarget
+		CULT F 0 Bright A_CustomMissile ("IllusBlast",42,-6,0,1,0)
+		CULT F 0 Bright A_CustomMissile ("IllusBlast",42,6,0,1,0)
+		CULT F 8 Bright
+		Goto See
+	}
 }
 
-ACTOR Thrall5 : Thrall 30123 
+ACTOR Thrall5 : Thrall
 { 
-translation "116:124=116:124"
-Obituary "%o was killed by a Warlock Cultist."
-States 
-   { 
-   Missile:
-       CULT EE 5 A_FaceTarget
-       CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,-6,0)
-       CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,-6,-15)
-       CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,-6,15)
-       CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,6,0)
-       CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,6,-15)
-       CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,6,15)
-       CULT F 8 Bright A_PlaySound("DSREAVAT")
-       Goto See
-   } 
-}
-
-ACTOR Thrall2 30200 
-{
-Health 100
-PainChance 10
-Speed 8 
-Radius 20 
-Height 52 
-Mass 100 
-MONSTER
-+FLOORCLIP
-+DONTHURTSPECIES
-translation "116:124=80:90"
--NOGRAVITY
--FLOAT
-AttackSound "monster/culatk"  
-  seesound "shotgut/sight"
-  painsound "shotgut/pain"
-  deathsound "shotgut/death" 
-States 
-   { 
-   Spawn: 
-       CULT AB 10 A_Look 
-       Loop 
-   See: 
-       CULT AABBCCDD 2 A_VileChase
-       Loop 
-       Heal:
-       CULT "F" 10 BRIGHT
-       Goto See
-   Pain: 
-       CULT G 2 
-       CULT G 2 A_Pain 
-       Goto See 
-   Death: 
-       CULT H 8 
-       CULT I 8 A_Scream 
-       CULT J 8 
-       CULT K 8 A_NoBlocking 
-       CULT L 8 
-       CULT M -1 
-       Stop
-   } 
+	translation "116:124=116:124"
+	Obituary "%o was killed by a Warlock Cultist."
+	States
+	{ 
+	Missile:
+		CULT EE 5 A_FaceTarget
+		CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,-6,0)
+		CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,-6,-15)
+		CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,-6,15)
+		CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,6,0)
+		CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,6,-15)
+		CULT F 0 Bright A_CustomMissile ("CrossbowFX3",42,6,15)
+		CULT F 8 Bright A_PlaySound("DSREAVAT")
+		Goto See
+	}
 }
 
 ACTOR ThrallShot1
 {
-   Radius 4
-   Height 6
-   Speed 20
-   Damage 1
-   RENDERSTYLE ADD
-   ALPHA 0.67
-   PROJECTILE
-   +THRUGHOST
-   DeathSound "monster/disht1"
-   States
-   {
-   Spawn:
-      CFX4 A 2 Bright
-      CFX4 B 2 Bright
-      loop
-   Death:
-      CFX4 CDEF 3 Bright
-      stop
-   }
+	Radius 4
+	Height 6
+	Speed 20
+	Damage 1
+	RENDERSTYLE ADD
+	ALPHA 0.67
+	PROJECTILE
+	+THRUGHOST
+	DeathSound "monster/disht1"
+	States
+	{
+	Spawn:
+		CFX4 A 2 Bright
+		CFX4 B 2 Bright
+		loop
+	Death:
+		CFX4 CDEF 3 Bright
+		stop
+	}
 }
 
 actor GreyCultist 
 {
-  decal ZBloodBulletChip1
-  obituary "%o was made hole-y by a Grey cultist."
-  health 100
-  radius 20
-  height 56 
-  translation "112:127=96:111","209:223=193:207" 
-  mass 100
-  speed 4
-  painchance 10
-  seesound "shotgut/sight"
-  attacksound "shotgur/attack"
-  painsound "shotgut/pain"
-  deathsound "shotgut/death"
-  Scale 0.6
-  MONSTER
-  +NOSPLASHALERT
-  +FLOORCLIP
-  +DONTHURTSPECIES
-  +NOSPLASHALERT
-  states
-  {
-  Spawn:
-    BCUL A 10 A_Look
-    loop
-  See:
-    BCUL AAAAAAAAA 1 A_Chase
-    BCUL BBBBBBBBB 1 A_Chase
-    BCUL CCCCCCCCC 1 A_Chase
-    BCUL DDDDDDDDD 1 A_Chase
-    BCUL "\\\\\\\\" 1 A_Chase
-    loop
-  Missile:
-    BCUL A 0 A_FaceTarget
-    BCUL E 2 A_FaceTarget
-    BCUL F 3 bright A_CustomBulletAttack(5.6,5.6,1,1,"ZBBulletPuff")
-    BCUL E 0 A_CPosRefire
-    goto Missile
-  Pain:
-    BCUL G 3
-    BCUL G 3 A_Pain
-    goto See
-  Death:
-    BCUL H 5
-    BCUL I 5 A_Scream
-    BCUL J 5 A_Fall
-    BCUL KLMN 5
-    BCUL NONON 10
-    BCUL O -1
-    stop
-  Raise:
-    BCUL N 5 A_UnHideThing
-    BCUL MLKJIH 5
-    goto See
-  }
-}
-
-actor BigCultist : GreyCultist 
-{
-  obituary "%o was blasted by the Cultist Lord."
-  health 8000
-  radius 54
-  height 168 
-  translation "112:127=0:5","209:223=0:5" 
-  mass 1000000
-  scale 1.8
-  speed 10
-  painchance 0
-  seesound "shotgut/sight"
-  attacksound "shotgur/attack"
-  painsound "shotgut/pain"
-  deathsound "shotgut/death"
-  +BOSS
-  states
-  {
-  Missile:
-    BCUL A 0 A_FaceTarget
-    BCUL E 2 A_FaceTarget
-    BCUL F 3 bright A_CustomMissile("Rocket", 93, 18, 0)
-    BCUL E 0 A_CPosRefire
-    goto Missile
-  }
+	decal ZBloodBulletChip1
+	obituary "%o was made hole-y by a Grey cultist."
+	health 100
+	radius 20
+	height 56 
+	translation "112:127=96:111","209:223=193:207" 
+	mass 100
+	speed 4
+	painchance 10
+	seesound "shotgut/sight"
+	attacksound "shotgur/attack"
+	painsound "shotgut/pain"
+	deathsound "shotgut/death"
+	Scale 0.6
+	MONSTER
+	+NOSPLASHALERT
+	+FLOORCLIP
+	+DONTHURTSPECIES
+	+NOSPLASHALERT
+	states
+	{
+	Spawn:
+		BCUL A 10 A_Look
+		loop
+	See:
+		BCUL AAAAAAAAA 1 A_Chase
+		BCUL BBBBBBBBB 1 A_Chase
+		BCUL CCCCCCCCC 1 A_Chase
+		BCUL DDDDDDDDD 1 A_Chase
+		BCUL "\\\\\\\\" 1 A_Chase
+		loop
+	Missile:
+		BCUL A 0 A_FaceTarget
+		BCUL E 2 A_FaceTarget
+		BCUL F 3 bright A_CustomBulletAttack(5.6,5.6,1,1,"ZBBulletPuff")
+		BCUL E 0 A_CPosRefire
+		goto Missile
+	Pain:
+		BCUL G 3
+		BCUL G 3 A_Pain
+		goto See
+	Death:
+		BCUL H 5
+		BCUL I 5 A_Scream
+		BCUL J 5 A_Fall
+		BCUL KLMN 5
+		BCUL NONON 10
+		BCUL O -1
+		stop
+	Raise:
+		BCUL N 5 A_UnHideThing
+		BCUL MLKJIH 5
+		goto See
+	}
 }
 
 actor BlueCultist : GreyCultist
 {
-  obituary "%o was blasted into bits by a blue cultist."
-  translation "112:127=200:207"
-  attacksound DSCU2ATK
-  states
-  {
-  Missile:
-    BCUL E 8 A_FaceTarget
-    BCUL F 8 bright A_CustomMissile("Rocketzwei", 31, 6, 0)
-    goto See
-  }
+	obituary "%o was blasted into bits by a blue cultist."
+	translation "112:127=200:207"
+	attacksound DSCU2ATK
+	states
+	{
+	Missile:
+		BCUL E 8 A_FaceTarget
+		BCUL F 8 bright A_CustomMissile("Rocketzwei", 31, 6, 0)
+		goto See
+	}
 }
 
 actor Rocketzwei
 {
-  Radius 6
-  Height 4
-  scale 0.5
-  Speed 15
-  Damage 3
-  Projectile
-  +RANDOMIZE
-  SeeSound "weapons/rocklf"
-  DeathSound "weapons/rocklx"
-  States
-  {
-  Spawn:
-    MISL A 1 bright
-    loop
-  Death:
-    MISL B 8 bright A_Explode(10,10)
-    MISL C 6 bright
-    MISL D 4 bright
-    stop
-  }
+	Radius 6
+	Height 4
+	scale 0.5
+	Speed 15
+	Damage 3
+	Projectile
+	+RANDOMIZE
+	SeeSound "weapons/rocklf"
+	DeathSound "weapons/rocklx"
+	States
+	{
+	Spawn:
+		MISL A 1 bright
+		loop
+	Death:
+		MISL B 8 bright A_Explode(10,10)
+		MISL C 6 bright
+		MISL D 4 bright
+		stop
+	}
 }
 
 
 
 actor YellowCultist : GreyCultist
 {
-  obituary "%o was set on fire by a Yellow cultist."
-  translation "112:127=160:167"
-  attacksound DSCU2ATK
-  states
-  {
-  Missile:
-    BCUL A 0 A_FaceTarget
-    BCUL E 2 A_FaceTarget
-    BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
-    BCUL E 4 A_FaceTarget
-    BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
-    BCUL E 4 A_FaceTarget
-    BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
-    BCUL E 4 A_FaceTarget
-    BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
-    BCUL E 4 A_FaceTarget
-    goto See
-  }
+	obituary "%o was set on fire by a Yellow cultist."
+	translation "112:127=160:167"
+	attacksound DSCU2ATK
+	states
+	{
+	Missile:
+		BCUL A 0 A_FaceTarget
+		BCUL E 2 A_FaceTarget
+		BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
+		BCUL E 4 A_FaceTarget
+		BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
+		BCUL E 4 A_FaceTarget
+		BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
+		BCUL E 4 A_FaceTarget
+		BCUL F 4 bright A_CustomMissile("Flameshot", 31, 6, 0)
+		BCUL E 4 A_FaceTarget
+		goto See
+	}
 }
 
 actor Flameshot
 {
-  Radius 10
-  Height 6
-  Speed 15
-  Damage 3
-  Projectile
-  +RANDOMIZE
-  RenderStyle Add
-  Alpha 0.75
-  SeeSound "DSCU2ATK"
-  DeathSound "vile/firecrkl"
-  States
-  {
-  Spawn:
-    PPSS AB 6 bright
-    loop
-  Death:
-    PPSS CDEF 4 bright
-    stop
-  }
+	Radius 10
+	Height 6
+	Speed 15
+	Damage 3
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 0.75
+	SeeSound "DSCU2ATK"
+	DeathSound "vile/firecrkl"
+	States
+	{
+	Spawn:
+		PPSS AB 6 bright
+		loop
+	Death:
+		PPSS CDEF 4 bright
+		stop
+	}
 }
 
 actor GreenCultist 
 {
-  decal ZBloodBulletChip1
-  obituary "%o was blasted into pieces by a Green cultist."
-  health 100
-  radius 20
-  height 56
-  mass 100
-  speed 4
-  painchance 10
-  seesound "shotgut/sight"
-  attacksound "shotgut/attack"
-  painsound "shotgut/pain"
-  deathsound "shotgut/death"
-  MONSTER
-  +FLOORCLIP
-  +DONTHURTSPECIES
-  +NOSPLASHALERT 
-  Scale 0.6
-  states
-  {
-  Spawn:
-    BCUL E 10 A_Look
-    loop
-  See:
-    BCUL AAAAAAAAA 1 A_Chase
-    BCUL BBBBBBBBB 1 A_Chase
-    BCUL CCCCCCCCC 1 A_Chase
-    BCUL DDDDDDDDD 1 A_Chase
-    BCUL "\\\\\\\\" 1 A_Chase
-    loop
-  Missile:
-    BCUL X 5 A_FaceTarget
-    BCUL YZ 5
-    BCUL "[" 0 A_ThrowGrenade("GreenCultistTNT",0,20,4,0)
-    BCUL "[]" 5
-    BCL2 A 5
-    goto See
-  Pain:
-    BCUL H 3
-    BCUL H 3 A_Pain
-    goto See
-  Death:
-    BCUL H 5
-    BCUL I 5 A_Scream
-    BCUL J 5 A_Fall
-    BCUL KLMN 5
-    BCUL NONON 10
-    BCUL O -1
-    stop
-     Raise:
-    BCUL N 5 A_UnHideThing
-    BCUL MLKJIH 5
-    goto See
-  }
+	decal ZBloodBulletChip1
+	obituary "%o was blasted into pieces by a Green cultist."
+	health 100
+	radius 20
+	height 56
+	mass 100
+	speed 4
+	painchance 10
+	seesound "shotgut/sight"
+	attacksound "shotgut/attack"
+	painsound "shotgut/pain"
+	deathsound "shotgut/death"
+	MONSTER
+	+FLOORCLIP
+	+DONTHURTSPECIES
+	+NOSPLASHALERT 
+	Scale 0.6
+	states
+	{
+	Spawn:
+		BCUL E 10 A_Look
+		loop
+	See:
+		BCUL AAAAAAAAA 1 A_Chase
+		BCUL BBBBBBBBB 1 A_Chase
+		BCUL CCCCCCCCC 1 A_Chase
+		BCUL DDDDDDDDD 1 A_Chase
+		BCUL "\\\\\\\\" 1 A_Chase
+		loop
+	Missile:
+		BCUL X 5 A_FaceTarget
+		BCUL YZ 5
+		BCUL "[" 0 A_ThrowGrenade("GreenCultistTNT",0,20,4,0)
+		BCUL "[]" 5
+		BCL2 A 5
+		goto See
+	Pain:
+		BCUL H 3
+		BCUL H 3 A_Pain
+		goto See
+	Death:
+		BCUL H 5
+		BCUL I 5 A_Scream
+		BCUL J 5 A_Fall
+		BCUL KLMN 5
+		BCUL NONON 10
+		BCUL O -1
+		stop
+		Raise:
+		BCUL N 5 A_UnHideThing
+		BCUL MLKJIH 5
+		goto See
+	}
 }
 
 actor RedCultist
 {
-  decal ZBloodBulletChip1
-  obituary "%o was punctured by a Red cultist."
-  health 100
-  radius 20
-  height 56
-  mass 100
-  speed 4
-  painchance 10
-  seesound "shotgut/sight"
-  attacksound "shotgut/attack"
-  painsound "shotgut/pain"
-  deathsound "shotgut/death"
-  MONSTER
-  +FLOORCLIP
-  +DONTHURTSPECIES
-  +NOSPLASHALERT 
-  translation "112:127=32:47"
-  Scale 0.6
-  states
-  {
-  Spawn:
-    BCUL E 10 A_Look
-    loop
-  See:
-    BCUL AAAAAAAAA 1 A_Chase
-    BCUL BBBBBBBBB 1 A_Chase
-    BCUL CCCCCCCCC 1 A_Chase
-    BCUL DDDDDDDDD 1 A_Chase
-    BCUL "\\\\\\\\" 1 A_Chase
-    loop
-  Missile:
-    BCUL E 10 A_FaceTarget
-    BCUL F 4 bright A_CustomBulletAttack(5.6,10.6,5,1,"ZBBulletPuff")
-    BCUL E 6 A_FaceTarget
-    BCUL F 4 bright A_CustomBulletAttack(5.6,10.6,5,1,"ZBBulletPuff")
-    goto See
-  Pain:
-    BCUL H 3
-    BCUL H 3 A_Pain
-    goto See
-  Death:
-    BCUL H 5
-    BCUL I 5 A_Scream
-    BCUL J 5 A_Fall
-    BCUL KLMN 5
-    BCUL NONON 10
-    BCUL O -1
-    stop
-     Raise:
-    BCUL N 5 A_UnHideThing
-    BCUL MLKJIH 5
-    goto See
-  }
+	decal ZBloodBulletChip1
+	obituary "%o was punctured by a Red cultist."
+	health 100
+	radius 20
+	height 56
+	mass 100
+	speed 4
+	painchance 10
+	seesound "shotgut/sight"
+	attacksound "shotgut/attack"
+	painsound "shotgut/pain"
+	deathsound "shotgut/death"
+	MONSTER
+	+FLOORCLIP
+	+DONTHURTSPECIES
+	+NOSPLASHALERT 
+	translation "112:127=32:47"
+	Scale 0.6
+	states
+	{
+	Spawn:
+		BCUL E 10 A_Look
+		loop
+	See:
+		BCUL AAAAAAAAA 1 A_Chase
+		BCUL BBBBBBBBB 1 A_Chase
+		BCUL CCCCCCCCC 1 A_Chase
+		BCUL DDDDDDDDD 1 A_Chase
+		BCUL "\\\\\\\\" 1 A_Chase
+		loop
+	Missile:
+		BCUL E 10 A_FaceTarget
+		BCUL F 4 bright A_CustomBulletAttack(5.6,10.6,5,1,"ZBBulletPuff")
+		BCUL E 6 A_FaceTarget
+		BCUL F 4 bright A_CustomBulletAttack(5.6,10.6,5,1,"ZBBulletPuff")
+		goto See
+	Pain:
+		BCUL H 3
+		BCUL H 3 A_Pain
+		goto See
+	Death:
+		BCUL H 5
+		BCUL I 5 A_Scream
+		BCUL J 5 A_Fall
+		BCUL KLMN 5
+		BCUL NONON 10
+		BCUL O -1
+		stop
+		Raise:
+		BCUL N 5 A_UnHideThing
+		BCUL MLKJIH 5
+		goto See
+	}
 }
 
 actor ZBBulletPuff : BulletPuff
-{  
-  Scale 0.8
-  renderstyle Translucent
-  alpha 0.5
-  attacksound "Shoot/Bullet"
-  +NOBLOCKMAP
-  +NOGRAVITY
-  +ALLOWPARTICLES
-  +RANDOMIZE
-  states
-  {
-  Spawn:
-    BSPR A 0
-  Melee:
-    PUFF A 0 A_Jump(128,8)
-    PUFF AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHH 1 A_FadeOut(0.01)
-    stop
-    PUFF IIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP 1 A_FadeOut(0.01)
-    stop
-  }
+{	
+	Scale 0.8
+	renderstyle Translucent
+	alpha 0.5
+	attacksound "Shoot/Bullet"
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+ALLOWPARTICLES
+	+RANDOMIZE
+	states
+	{
+	Spawn:
+		BSPR A 0
+	Melee:
+		PUFF A 0 A_Jump(128,8)
+		PUFF AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHH 1 A_FadeOut(0.01)
+		stop
+		PUFF IIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP 1 A_FadeOut(0.01)
+		stop
+	}
 }
 
 actor GreenCultistTNT
 {
-  radius 16
-  height 4
-  speed 30
-  Scale 0.5
-  activesound "DSBLAUNC"
-  PROJECTILE
-  +RANDOMIZE
-  +DONTSPLASH
-  +DONTGIB
-  +NOBOUNCESOUND
-  +BOUNCEONACTORS
-  //+FLOORHUGGER
-  +PUSHABLE
-  -SOLID
-  -NOGRAVITY
-  ExplosionDamage 10
-  ExplosionRadius 128
-  states
-  {
-  Spawn:
-    ADYN A 0 bright A_LoopActiveSound
-    goto see
-  See:
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN EEEE 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN FFFF 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN GGGG 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN HHHH 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN AAAA 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN BBBB 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN CCCC 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN DDDD 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN EEEE 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN FFFF 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN GGGG 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN HHHH 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN AAAA 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN BBBB 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN CCCC 1 bright A_SpawnItem("TNTSmoke")
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN DDDD 1 bright A_SpawnItem("TNTSmoke")
-    goto death
-  Death:
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN EIJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    ADYN A 0 bright A_LoopActiveSound
-    ADYN IJK 4 bright
-    MISL B 0 bright A_Explode
-    MISL B 0 bright A_PlaySound ("DSCAREXP")
-    MISL B 0 A_SpawnItem("FloorKaboom",-32)
-    stop
-  }
+	radius 16
+	height 4
+	speed 30
+	Scale 0.5
+	activesound "DSBLAUNC"
+	PROJECTILE
+	+RANDOMIZE
+	+DONTSPLASH
+	+DONTGIB
+	+NOBOUNCESOUND
+	+BOUNCEONACTORS
+	//+FLOORHUGGER
+	+PUSHABLE
+	-SOLID
+	-NOGRAVITY
+	ExplosionDamage 10
+	ExplosionRadius 128
+	states
+	{
+	Spawn:
+		ADYN A 0 bright A_LoopActiveSound
+		goto see
+	See:
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN EEEE 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN FFFF 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN GGGG 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN HHHH 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN AAAA 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN BBBB 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN CCCC 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN DDDD 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN EEEE 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN FFFF 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN GGGG 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN HHHH 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN AAAA 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN BBBB 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN CCCC 1 bright A_SpawnItem("TNTSmoke")
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN DDDD 1 bright A_SpawnItem("TNTSmoke")
+		goto death
+	Death:
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN EIJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		ADYN A 0 bright A_LoopActiveSound
+		ADYN IJK 4 bright
+		MISL B 0 bright A_Explode
+		MISL B 0 bright A_PlaySound ("DSCAREXP")
+		MISL B 0 A_SpawnItem("FloorKaboom",-32)
+		stop
+	}
 }
 
 actor TNTSmoke : BulletPuff
 {
-  renderstyle Translucent
-  alpha 0.5
-  +NOBLOCKMAP
-  +NOGRAVITY  
-  +DONTSPLASH
-  PROJECTILE
-  +WINDTHRUST
-  +ALLOWPARTICLES
-  states
-  {
-  Spawn:
-    PUFF A 0 A_Jump(128,32)
-    PUFF AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHH 1 A_FadeOut(0.01)
-    stop
-    PUFF IIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP 1 A_FadeOut(0.01)
-    stop
-  }
+	renderstyle Translucent
+	alpha 0.5
+	+NOBLOCKMAP
+	+NOGRAVITY	
+	+DONTSPLASH
+	PROJECTILE
+	+WINDTHRUST
+	+ALLOWPARTICLES
+	states
+	{
+	Spawn:
+		PUFF A 0 A_Jump(128,32)
+		PUFF AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHH 1 A_FadeOut(0.01)
+		stop
+		PUFF IIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP 1 A_FadeOut(0.01)
+		stop
+	}
 }
 
 actor FloorKaboom
 {
-  radius 32
-  height 50
-  Decal Scorch
-  renderstyle Add
-  alpha 0.9
-  +NOBLOCKMAP
-  -NOGRAVITY  
-  +DONTSPLASH
-  +RANDOMIZE  
-  PROJECTILE
-  states
-  {
-  Spawn:
-    MISL B 0
-    goto Death
-  Death:    
-    DEXP A 0 A_Jump(128,15)
-    DEXP ABC 2 bright     
-    DEXP DEFGHI 2 bright
-    DEXP JKLM 1 bright
-    stop
-    DEXP NOP 2 bright    
-    DEXP QRSTU 2 bright
-    DEXP VWXYZ 1 bright
-    stop
-  }
+	radius 32
+	height 50
+	Decal Scorch
+	renderstyle Add
+	alpha 0.9
+	+NOBLOCKMAP
+	-NOGRAVITY	
+	+DONTSPLASH
+	+RANDOMIZE	
+	PROJECTILE
+	states
+	{
+	Spawn:
+		MISL B 0
+		goto Death
+	Death:		
+		DEXP A 0 A_Jump(128,15)
+		DEXP ABC 2 bright		
+		DEXP DEFGHI 2 bright
+		DEXP JKLM 1 bright
+		stop
+		DEXP NOP 2 bright		
+		DEXP QRSTU 2 bright
+		DEXP VWXYZ 1 bright
+		stop
+	}
+}
+
+//Boss
+actor BigCultist : GreyCultist 
+{
+	obituary "%o was blasted by the Cultist Lord."
+	health 8000
+	radius 54
+	height 168 
+	translation "112:127=0:5","209:223=0:5" 
+	mass 1000000
+	scale 1.8
+	speed 10
+	painchance 0
+	seesound "shotgut/sight"
+	attacksound "shotgur/attack"
+	painsound "shotgut/pain"
+	deathsound "shotgut/death"
+	+BOSS
+	states
+	{
+	Missile:
+		BCUL A 0 A_FaceTarget
+		BCUL E 2 A_FaceTarget
+		BCUL F 3 bright A_CustomMissile("Rocket", 93, 18, 0)
+		BCUL E 0 A_CPosRefire
+		goto Missile
+	}
 }

@@ -1,3 +1,56 @@
+//===========================================================================
+//
+// Duke Nuken 3D Sounds
+//
+//===========================================================================
+
+Pigcop/Sight			PIGRG
+Pigcop/Active			PIGRM
+Pigcop/Pain			PIGPN
+Pigcop/Death			PIGDY
+Pigcop/Attack			SHOTGUN7
+
+Enforcer/Sight			ENFOSEE
+Enforcer/Active			ENFOACT
+Enforcer/Pain			ENFOPAIN
+Enforcer/Death			ENFODIE
+
+Octabrain/Sight			OCTOSIT
+Octabrain/Active		OCTOACT
+Octabrain/Pain			OCTOPAIN
+Octabrain/Death			OCTODIE
+Octabrain/Attack		OCTOATK
+Octabrain/Meele			OCTOMELE
+
+AssaultCo/Sight			ASCOSIT
+AssaultCo/Active		ASCOACT
+AssaultCo/Pain			ASCOPAIN
+AssaultCo/Death			ASCODIE
+AssaultCo/Attack		ASCOATK
+AssaultCo/Meele			ASCOMELE
+
+Battlelord/Sight		OVLOSIT
+Battlelord/Active		OVLOACT
+Battlelord/Pain			OVLOPAIN
+Battlelord/Death		OVLODEAT
+Battlelord/Attack		OVLOATK
+
+overlord/death			OVERDIE
+overlord/roam			OVERACT
+overlord/pain			OVERPAIN
+overlord/see			OVERSEE
+
+Cycloid/Sight			CYCLSIT
+Cycloid/Active			CYCLACT
+Cycloid/Pain			CYCLPAIN
+Cycloid/Death			CYCLDIE
+Cycloid/Attack			CYCLATK
+
+GRBOUNCE GRBOUNCE
+BOFIRE   BOFIRE
+BOEXP BOEXP
+CHAINSH  CHAINSH
+
 //------------------blood------------------
 DSBLAUNC	DSBLAUNC
 DSCLTSE1	DSCLTSE1
@@ -290,55 +343,6 @@ BabyHurricaneSpawn	airewind
 AgonyElementalSee	dsagelse
 AgonyElementalAttack	dsagelat
 AgonyElementalDeath	dsageldt
-//-------Duke3d-----
-ASCOACT ASCOACT
-ASCOATK ASCOATK
-ASCOMELE ASCOMELE
-ASCOPAIN ASCOPAIN
-ASCODIE ASCODIE
-ASCOSIT ASCOSIT
-
-BOEXP BOEXP
-
-CHAINSH  CHAINSH
-
-ENFOSEE ENFOSEE
-ENFOPAIN ENFOPAIN
-ENFOACT ENFOACT
-ENFODIE ENFODIE
-
-OCTOSIT OCTOSIT
-OCTODIE OCTODIE
-OCTOATK OCTOATK
-OCTOPAIN OCTOPAIN
-OCTOMELE OCTOMELE
-OCTOACT OCTOACT
-
-pigcop/sight PIGRG
-pigcop/active PIGRM
-pigcop/pain PIGPN
-pigcop/death PIGDY
-pigcop/attack SHOTGUN7
-
-OVLOSIT OVLOSIT
-OVLOACT OVLOACT
-OVLOATK OVLOATK
-OVLOPAIN OVLOPAIN
-OVLODEAT OVLODEAT
-
-GRBOUNCE GRBOUNCE
-BOFIRE   BOFIRE
-
-CYCLATK CYCLATK
-CYCLSIT CYCLSIT
-CYCLACT CYCLACT
-CYCLPAIN CYCLPAIN
-CYCLDIE CYCLDIE
-
-overlord/death   OVERDIE
-overlord/roam    OVERACT
-overlord/pain    OVERPAIN
-overlord/see     OVERSEE
 
 superbaron/scream dssbsit
 superbaron/pain dssbpain

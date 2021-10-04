@@ -1,154 +1,166 @@
-//Decorate data base of baron variants.
+// The amount of data related to barons in Armaggedon invasion was too much for
+// me to randle in a single run, so i gave up and kept the CD ones until i find
+// a better way to cover them. So they can get in par with CD ones.
+//Alpha status: Unused.
 
-ACTOR GreaterBaron : BaronOfHell 7005
+ACTOR CyberBaron : CyberNoble
 {
-      MONSTER
-      Health 4000
-      radius 36
-      Height 96
-      speed 11
-      scale 1.5
-      painchance 20
-      +MISSILEMORE
-      +MISSILEEVENMORE
-      Translation "16:47=80:95"
-      
-      States
-      {
-      		Missile:
-      			BOSS EF 4 A_Facetarget
-      			BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 0)
-      			BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 15)
-            		BOSS G 4 A_CustomMissile("BaronBallfast", 40, 10, -15)
-            		BOSS EF 4 A_Facetarget
-            		BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 0)
-      			BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 15)
-            		BOSS G 4 A_CustomMissile("BaronBallfast", 40, 10, -15)
-            		BOSS EF 4 A_Facetarget
-            		BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 0)
-      			BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 15)
-            		BOSS G 4 A_CustomMissile("BaronBallfast", 40, 10, -15)
-            		BOSS EF 4 A_Facetarget
-            		BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 0)
-      			BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 15)
-            		BOSS G 4 A_CustomMissile("BaronBallfast", 40, 10, -15)
-            		BOSS EF 4 A_Facetarget
-            		BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 0)
-      			BOSS G 0 A_CustomMissile("BaronBallfast", 40, 10, 15)
-            		BOSS G 8 A_CustomMissile("BaronBallfast", 40, 10, -15)
-      			Goto See
-      		}	
-      	obituary "%o was bruised by a Greater Baron."
-  hitobituary "%o was ripped open by a Greater Baron."
-
+	Scale 1.1
+	Health 1250
+	Obituary "%o was annihilated by a Cyber Baron."
+	HitObituary "%o got whacked by a Cyber Baron."
+	BloodType "NewBlood"
+	BloodColor "ff 00 00"
+	radius 24
+	height 64
+	mass 1000
+	speed 8
+	painchance 40
+	seesound "cbaron/sight"
+	painsound "cbaron/pain"
+	deathsound "cbaron/death"
+	activesound "cbaron/active"
+	MONSTER
+	+NORADIUSDMG
+	+DONTHURTSPECIES
+	States 
+	{ 
+	Spawn: 
+		BBOS A 7 A_Look
+		BBOS A 7 A_Look 
+		Loop 
+	See:
+		BBOS AAABBB 2 A_Chase
+		TNT1 A 0 A_SpawnItem("HoofStep",0,0,0,0)
+		BBOS CCCDDD 2 A_Chase
+		TNT1 A 0 A_Playsound("monster/bruwlk")
+		Loop
+	Pause:
+		BBOS E 10
+		Goto See
+	Missile:
+		TNT1 A 0 A_Jump(128,"LargeBalls","Rocket","HomingRocket")
+	Normal:
+		BBOS PQ 7 A_FaceTarget 
+		BBOS R 1 Bright A_CustomMissile("CyNobleBall",32,0,0)		
+		TNT1 A 0 A_CustomMissile("CyNobleBall",32,0,6)
+		BBOS R 5 Bright A_CustomMissile("CyNobleBall",32,0,-6)
+		TNT1 A 0 A_Jump(87,"LargeBalls","Rocket","HomingRocket")
+		Goto See
+		LargeBalls:
+		BBOS PQ 7 A_FaceTarget
+		BBOS R 6 Bright A_CustomMissile("DukeBall2",32,0,0)
+		BBOS QPQ 5 A_FaceTarget
+		BBOS R 6 Bright A_CustomMissile("DukeBall2",32,0,0)
+		TNT1 A 0 A_Jump(87,"Rocket","HomingRocket")
+		Goto See
+	Rocket:
+		BBOS E 10 A_FaceTarget
+		BBOS F 8 Bright A_CustomMissile("CyNobleRocket",32,0,0,0)
+		BBOS E 10
+		TNT1 A 0 A_Jump(87,"HomingRocket")
+		Goto See
+	HomingRocket:
+		BBOS E 10 A_FaceTarget 
+		BBOS F 8 Bright A_CustomMissile("BruiserMissile",32,0,0,0)
+		BBOS E 10 A_FaceTarget
+		Goto See	
+	Melee:
+		BBOS PQ 7 A_FaceTarget
+		BBOS R 7 A_MeleeAttack
+		Goto See
+	Pain: 
+		TNT1 A 0 A_Jump(87,"PainMissile")
+		BBOS H 4 A_Pain
+		Goto See
+	PainMissile:
+		BBOS H 4 A_Pain
+		Goto Missile	
+	Death:
+		BBOS I 20 A_Scream
+		TNT1 AA 0 A_SpawnItemEx("GibbedGenerator",0,0,0,0,0,0,0,128)	
+		BBOS JJJKKK 2 Bright A_CustomMissile("Kaboom5",FRandom(10,50),0,FRandom(0,360),2,FRandom(0,360))
+		TNT1 AA 0 A_SpawnItemEx("GibbedGenerator",0,0,0,0,0,0,0,128)
+		TNT1 AAAA 0 A_CustomMissile("SmokeFX",FRandom(30,60),0,FRandom(0,360),2,FRandom(0,360))	
+		BBOS L 4 Bright A_NoBlocking
+		BBOS MN 3 Bright
+		BBOS O -1
+		Stop
+	Raise:
+		TNT1 A 0
+		TNT1 A 0 A_SpawnItemEx("VileHealEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		BBOS N 5
+		BBOS MLKJI 5
+		Goto See
+	} 
 }
 
-// Cyber Baron created by Ben2k9/Virtue
-
-
-ACTOR Cyberbaron : Baronofhell 19999
+ACTOR CyberBelphegor~ : CyberBaron~ replaces CyberBelphegor
 {
-  obituary "%o was bruised by a cyber baron."
-  hitobituary "%o was ripped to shreds by a cyber baron."
-  health 1000
-  radius 24
-  height 64
-  mass 1000
-  speed 8
-  painchance 40
-  seesound "cbaron/sight"
-  painsound "cbaron/pain"
-  deathsound "cbaron/death"
-  activesound "cbaron/active"
-  MONSTER
-  +NORADIUSDMG
-  +DONTHURTSPECIES
-  states
-  {
-  Spawn:
-    CBOS AB 10 A_Look
-    loop
-  See:
-    CBOS A 3 A_chase
-    CBOS A 3 A_chase   
-    CBOS B 0 A_playsound("cbaron/metal")
-    CBOS BB 3 A_chase
-    CBOS CC 3 A_chase    
-    CBOS D 3 A_chase
-    CBOS D 3 A_hoof
-    loop
-  Melee:
-    CBOS PQ 8 A_FaceTarget
-    CBOS R 8 A_BruisAttack
-      Goto See
-  Missile:
-    CBOS E 0 A_jump(80,5)
-    CBOS E 10 A_FaceTarget
-    CBOS E 10 A_FaceTarget
-    CBOS F 10 Bright A_customMissile(cyberattack2,27,16,0)
-    CBOS E 10 A_FaceTarget
-      goto See
-    CBOS PQ 8 A_FaceTarget
-    CBOS R 8 A_BruisAttack
-      Goto See      
- Pain:
-    CBOS H 2
-    CBOS H 2 A_Pain
-    goto See
-  Death:
-    CBOS I 8
-    CBOS J 8 A_Scream
-    CBOS K 8 bright A_Playsound("world/barrelx")
-    CBOS L 8 bright A_NoBlocking
-    CBOS M 8 bright
-    CBOS N 8 bright
-    CBOS O -1
-    stop
-   }
-}          
-  
-  
-  ACTOR Cyberhellknight : Cyberbaron 20000
-{
-  obituary "%o was splayed by a cyber hellknight."
-  hitobituary "%o was slashed by a cyber hellknight."
-  health 500
-   Translation "16:47=130:140"
-}  
-        
-  ACTOR CyberBelphegor : Cyberbaron 20001
-  {
-    obituary "%o was slain by a cyber Belphegor."
-  hitobituary "%o was ripped to shreds by a cyber Belphegor."
-  Translation "16:47=176:191"
-  Health 1600
-  	 States
-      {
-      	Missile:
-      			CBOS E 0 A_jump(80,7)
-      			CBOS E 10 A_Facetarget
-      			CBOS F 10 A_CustomMissile("Cyberattack2", 27, 16, 0)
-            	      	CBOS E 10 A_Facetarget
-      			CBOS F 10 A_CustomMissile("Cyberattack2", 27, 16, 0)
-            	      	CBOS E 10 A_Facetarget
-      			CBOS F 10 A_CustomMissile("Cyberattack2", 27, 16, 0)
-      			Goto See
-      			CBOS PQ 8 A_Facetarget
-      			CBOS R 8 A_BruisAttack
-            	        CBOS PQ 8 A_Facetarget
-      			CBOS R 8 A_BruisAttack
-            	      	CBOS PQ 8 A_Facetarget
-      			CBOS R 8 A_BruisAttack
-      			Goto See
-      		}	
-  }
-  
-ACTOR Cyberattack2 : rocket
-{
-  Damage 10
-	explosiondamage 16
-	Explosionradius 64
+	Health 1700
+	Obituary "%o was annihilated by a Cyber Belphegor."
+	HitObituary "%o got whacked by a Cyber Belphegor."
+	Translation "16:47=176:191"
 }
+
+ACTOR GreaterBaron : BaronOfHell
+{
+	Health 4500
+	radius 36
+	Height 96
+	speed 12
+	scale 1.5
+	painchance 20
+	MONSTER
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	Translation "16:47=80:111"
+	DropItem "LifeCore" 128 40
+	DropItem "BossArmorBonusMax" 128 1
+	DropItem "MissileBox" 128 20
+	DropItem "QuickHands", 128
+	Obituary "%o felt the wrath of Greater Baron."
+	States
+	{
+	Melee:
+	Missile:
+		TNT1 A 0 A_Jump(128,"GiantBalls","Comet")
+	Normal:
+		HFRY KL 4 A_FaceTarget
+		HFRY M 1 Bright A_CustomMissile("CyNobleBallFast",48,0,0)		
+		TNT1 A 0 A_CustomMissile("CyNobleBallFast",48,0,6)
+		HFRY M 1 Bright A_CustomMissile("CyNobleBallFast",48,0,-6)
+		TNT1 A 0 A_CustomMissile("CyNobleBallFast",48,0,12)
+		HFRY M 1 Bright A_CustomMissile("CyNobleBallFast",48,0,-12)
+		TNT1 A 0 A_CustomMissile("CyNobleBallFast",48,0,18)
+		HFRY M 2 Bright A_CustomMissile("CyNobleBallFast",48,0,-18)
+		TNT1 A 0 A_Jump(160,"GiantBalls","Comet","Normal","Normal","Normal")
+		Goto See
+	GiantBalls:
+		HFRY EF 6 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("DukeBall2Fast",48,0,-8)
+		TNT1 A 0 A_CustomMissile("DukeBall2Fast",48,0,8)
+		HFRY G 3 Bright A_CustomMissile("DukeBall2Fast",48,0,0)
+		HFRY HI 6 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("DukeBall2Fast",48,0,-8)
+		TNT1 A 0 A_CustomMissile("DukeBall2Fast",48,0,8)
+		HFRY J 3 Bright A_CustomMissile("DukeBall2Fast",48,0,0)
+		TNT1 A 0 A_Jump(100,"Comet")
+		Goto See
+	Comet:
+		HFRY KL 8 A_FaceTarget	
+		TNT1 A 0 A_CustomMissile("HDComet",48,0,-8)
+		TNT1 A 0 A_CustomMissile("HDComet",48,0,8)
+		HFRY M 7 Bright A_CustomMissile("HDComet",48,0,0)
+		Goto See
+	}
+}
+
+ACTOR CyNobleBallFast : CyNobleBall
+{Speed 18}
+
+ACTOR DukeBall2Fast : DukeBall2
+{Speed 32}
 
 ACTOR GreaterCyberBaron : Cyberbaron 15843
 {

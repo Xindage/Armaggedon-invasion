@@ -1,0 +1,25 @@
+// This data is kept for future reference.
+// "DOOM"
+actor CompatZombieMarine : RandomSpawner replaces ZombieMarine
+{
+DropItem "AssaultShotgunZombie", 256, 28
+DropItem "Chaingunner", 256, 28
+DropItem "Minigunner", 256, 14
+DropItem "DemonTechZombie", 256, 28
+}
+
+actor CompatSoulHarvester : RandomSpawner replaces SoulHarvester
+{
+DropItem "Devil", 256, 70
+DropItem "PhaseImp", 256, 30
+}
+
+// When Armaggedon Diabloist attacks the player the server crashes so it's
+// directly replaced by CD Diabolist.
+actor CompatDiabloist : RandomSpawner replaces Diabloist
+{
+DropItem "Diabolist", 256, 100
+}
+
+// Complex Spiders are already smaller by default (radius 52cd vs 90arm)
+actor CompatSmallermastermind : MastermindReplacer replaces Smallermastermind {}
