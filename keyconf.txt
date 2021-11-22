@@ -1,3 +1,0 @@
-weaponsection Resources
-
-setslot 3 Shotgun SuperShotgun Heavydoubleshotgun

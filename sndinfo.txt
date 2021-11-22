@@ -1,3 +1,4 @@
+TODO: Separate each monsters and projectiles of each class.
 //===========================================================================
 //
 // Duke Nuken 3D Sounds
@@ -6,7 +7,7 @@
 
 Pigcop/Sight			PIGRG
 Pigcop/Active			PIGRM
-Pigcop/Pain			PIGPN
+Pigcop/Pain				PIGPN
 Pigcop/Death			PIGDY
 Pigcop/Attack			SHOTGUN7
 
@@ -51,6 +52,75 @@ BOFIRE   BOFIRE
 BOEXP BOEXP
 CHAINSH  CHAINSH
 
+//===========================================================================
+//
+// Strife Sounds
+//
+//===========================================================================
+reaver/sight			DSREVSEE
+reaver/pain				DSREAVPN
+reaver/death			DSREVDTH
+reaver/active			DSREVACT
+reaver/attack			DSREVVAT
+reaver/blade			DSREVBLD
+
+crusader/sight			DSRB2SEE
+crusader/pain			DSRB2PN
+crusader/death			DSRB2DTH
+crusader/active			DSRB2ACT
+
+inquisitor/sight		DSINQSEE
+inquisitor/death		DSINQDTH
+inquisitor/active		DSINQACT
+
+//===========================================================================
+//
+// Wolf 3D Sounds - Gonna be removed
+//
+//===========================================================================
+shots/single		DSSHOT
+shots/burst		DSMGUN
+dog/sight		DSDOGSIT
+dog/attack		DSDOGATK
+dog/death		DSDOGDTH
+sol/die1		DSSOLDT1
+sol/die2		DSSOLDT2
+sol/die3		DSSOLDT3
+sol/die4		DSSOLDT4
+sol/die5		DSSOLDT5
+sol/die6		DSSOLDT6
+sol/die7		DSSOLDT7
+brown/sight		DSBRNSIT
+$random brown/death	{ sol/die1 sol/die2 sol/die3 sol/die4 sol/die5 sol/die6 sol/die7 }
+blue/sight		DSBLUSIT
+blue/death		DSBLUDTH
+
+//===========================================================================
+//
+// Heretic Sounds
+//
+//===========================================================================
+weapons/bowhit			hrnhit
+hknight/sight			kgtsit
+hknight/attack			kgtatk
+hknight/melee			kgtat2
+hknight/pain			kgtpai
+hknight/death			kgtdth
+hknight/active			kgtsit
+hknight/hit				hrnhit
+hknight/axewhoosh		kgtatk
+
+minotaur/sight			MINSIT
+minotaur/melee			STFHIT
+minotaur/attack1		MINAT1
+minotaur/attack2		MINAT2
+minotaur/attack3		MIAAT3
+minotaur/pain			MINPAI
+minotaur/death			MINDTH
+minotaur/active			MINACT
+minotaur/fx2hit			PHOHIT
+minotaur/fx3hit			PHOHIT
+
 //------------------blood------------------
 DSBLAUNC	DSBLAUNC
 DSCLTSE1	DSCLTSE1
@@ -87,37 +157,6 @@ TJERDTH TJERDTH
 TJERSIT TJERSIT
 TJERHOOF TJERHOOF
 DSSKLAIR DSSKLAIR
-//------------------wolf3d------------------
-shots/single		DSSHOT
-shots/burst		DSMGUN
-dog/sight		DSDOGSIT
-dog/attack		DSDOGATK
-dog/death		DSDOGDTH
-sol/die1		DSSOLDT1
-sol/die2		DSSOLDT2
-sol/die3		DSSOLDT3
-sol/die4		DSSOLDT4
-sol/die5		DSSOLDT5
-sol/die6		DSSOLDT6
-sol/die7		DSSOLDT7
-brown/sight		DSBRNSIT
-$random brown/death	{ sol/die1 sol/die2 sol/die3 sol/die4 sol/die5 sol/die6 sol/die7 }
-blue/sight		DSBLUSIT
-blue/death		DSBLUDTH
-//------------------strife------------------
-inquisitor/sight	dsinqsee
-inquisitor/death	dsinqdth
-inquisitor/active	dsinqact
-crusader/sight		dsrb2see
-crusader/pain		dsrb2pn
-crusader/death		dsrb2dth
-crusader/active		dsrb2act
-reaver/sight		dsrevsee
-reaver/pain		dsreavpn
-reaver/death		dsrevdth
-reaver/active		dsrevact
-reaver/attack		dsreavat
-reaver/blade		dsrevbld
 
 //-------------------------------------------
 weapons/hellfi		      dshellfi
@@ -371,24 +410,3 @@ weapons/boom1 dsboom1
 weapons/boltfi dsboltfi
 weapons/firex4 dsfirex4
 weapons/scorch dsscorch
-
-//------heretic-----
-weapons/bowhit			hrnhit
-hknight/sight			kgtsit
-hknight/attack			kgtatk
-hknight/melee			kgtat2
-hknight/pain			kgtpai
-hknight/death			kgtdth
-hknight/active			kgtsit
-hknight/hit			hrnhit
-hknight/axewhoosh		kgtatk
-minotaur/sight			minsit
-minotaur/melee			stfhit
-minotaur/attack1		minat1
-minotaur/attack2		minat2
-minotaur/attack3		minat3
-minotaur/pain			minpai
-minotaur/death			mindth
-minotaur/active			minact
-minotaur/fx2hit			phohit
-minotaur/fx3hit			phohit
