@@ -6,75 +6,80 @@
 //------------\\
 actor AgonyElemental
 {
-MONSTER
-Height 170
-Radius 70
-Health 9000
-mass 9999999999999
-+FLOAT
-Speed 15
-+QUICKTORETALIATE
-+NOGRAVITY
-+BOSS
-+MISSILEMORE
-+MISSILEEVENMORE
-seesound "AgonyElementalSee"
-deathsound "AgonyElementalDeath"
-renderstyle translucent
-  Obituary "%o got eaten by the souls of the Agony Elemental."
-States
-{
-Spawn:
-BHWL A 0 A_JumpIfInventory("shell", 30, "Spawn2")
-BHWL A 1 A_Look
-Loop
-Spawn2:
-BHWL L 1 A_Look
-Loop
-See:
-BHWL A 0 A_JumpIfInventory("shell", 30, "See2")
-BHWL A 4 A_Chase
-Loop
-Missile:
-BHWL B 0 A_PlaySound("AgonyElementalAttack")
-BHWL BBBBBBBBBBBBBBBBBBBB 2 A_FaceTarget
-BHWL CCCCCCCCCCCCCCCCCCCC 2 A_FaceTarget
-BHWL D 1 A_CustomMissile("AgonySoul", Random(50,60), random(-10,10), random(-20,20),2,random(-20,20))
-BHWL D 0 A_GiveInventory("Clip",4)
-BHWL D 0 A_FaceTarget
-BHWL D 0 A_JumpIfInventory("Clip", 80, "MissileEnd")
-Goto Missile+41
-MissileEnd:
-BHWL D 0 A_TakeInventory("Clip",90)
-BHWL CB 15
-BHWL A 0 A_JumpIfInventory("shell", 30, "See2")
-Goto See
-Death:
-BHWL E 7 A_Scream
-BHWL F 7 A_Fall
-BHWL GHIJ 7
-BHWL K 200
-Goto Fade
-Fade:
-BHWL K 1 A_FadeOut(0.05)
-Loop
-See2:
-BHWL L 1 A_Chase("Missile2","Missile2")
-Loop
-Missile2:
-BHWL MMM 3 A_FaceTarget
-BHWL NNN 3 A_FaceTarget
-BHWL O 1 A_CustomMissile("AgonySoul", Random(50,60), random(-10,10), random(-20,20),2,random(-20,20))
-BHWL O 0 A_GiveInventory("Clip",2)
-BHWL O 0 A_FaceTarget
-BHWL O 0 A_JumpIfInventory("Clip", 50, "MissileEnd2")
-Goto Missile2+6
-MissileEnd2:
-BHWL O 0 A_TakeInventory("Clip",90)
-BHWL NM 10
-BHWL C 0 A_JumpIfHealthLower(40000,"See2")
-Goto See
-}
+	MONSTER
+	Height 170
+	Radius 70
+	Health 9000
+	mass 5000
+	Speed 15
+	+FLOAT
+	+QUICKTORETALIATE
+	+NOGRAVITY
+	+BOSS
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	+DONTTHRUST
+	+NOICEDEATH
+	seesound "AgonyElementalSee"
+	deathsound "AgonyElementalDeath"
+	renderstyle translucent
+	Obituary "%o got eaten by the souls of the Agony Elemental."
+	DamageFactor "PDTBFG", 0.2
+	DamageFactor "PDTBFGTracer", 0.6
+	States
+	{
+	Spawn:
+		BHWL A 0 A_JumpIfInventory("shell", 30, "Spawn2")
+		BHWL A 1 A_Look
+		Loop
+	See:
+		BHWL A 0 A_JumpIfInventory("shell", 30, "See2")
+		BHWL A 4 A_Chase
+		Loop
+	Missile:
+		BHWL B 0 A_PlaySound("AgonyElementalAttack")
+		BHWL BBBBBBBBBBBBBBBBBBBB 2 A_FaceTarget
+		BHWL CCCCCCCCCCCCCCCCCCCC 2 A_FaceTarget
+		BHWL D 1 A_CustomMissile("AgonySoul", Random(50,60), random(-10,10), random(-20,20),2,random(-20,20))
+		BHWL D 0 A_GiveInventory("Clip",4)
+		BHWL D 0 A_FaceTarget
+		BHWL D 0 A_JumpIfInventory("Clip", 80, "MissileEnd")
+		Goto Missile+41
+	MissileEnd:
+		BHWL D 0 A_TakeInventory("Clip",90)
+		BHWL CB 15
+		BHWL A 0 A_JumpIfInventory("shell", 30, "See2")
+		Goto See
+	//Low Health
+	Spawn2:
+		BHWL L 1 A_Look
+		Loop
+	See2:
+		BHWL L 1 A_Chase("Missile2","Missile2")
+		Loop
+	Missile2:
+		BHWL MMM 3 A_FaceTarget
+		BHWL NNN 3 A_FaceTarget
+		BHWL O 1 A_CustomMissile("AgonySoul", Random(50,60), random(-10,10), random(-20,20),2,random(-20,20))
+		BHWL O 0 A_GiveInventory("Clip",2)
+		BHWL O 0 A_FaceTarget
+		BHWL O 0 A_JumpIfInventory("Clip", 50, "MissileEnd2")
+		Goto Missile2+6
+	MissileEnd2:
+		BHWL O 0 A_TakeInventory("Clip",90)
+		BHWL NM 10
+		BHWL C 0 A_JumpIfHealthLower(40000,"See2")
+		Goto See
+	Death:
+		BHWL E 7 A_Scream
+		BHWL F 7 A_Fall
+		BHWL GHIJ 7
+		BHWL K 200
+		Goto Fade
+	Fade:
+		BHWL K 1 A_FadeOut(0.05)
+		Loop
+	}
 }
 
 actor AgonySoul

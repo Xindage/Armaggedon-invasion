@@ -1,5 +1,6 @@
 //Decorate data base of monsters based on heretic.
 //Alpha status: Complete.
+//Todo: The projectiles section.
 
 // --->
 // EnhancedKnight
@@ -1087,3 +1088,24 @@ ACTOR HolyMissileTrail
       Stop
    }
 }
+
+// --->
+// Invasion Spawn Spots
+// --->
+actor EnhancedKnightSpot : CustomMonsterInvasionSpot 10012
+{DropItem EnhancedKnight}
+
+actor HellsergeantSpot : CustomMonsterInvasionSpot 10010
+{DropItem Hellsergeant}
+
+ACTOR DeathKnightSpawner : CustomMonsterInvasionSpot 13346
+{DropItem DeathKnight}
+
+ACTOR DiscipleSpawner : CustomMonsterInvasionSpot 12344
+{DropItem Disciple}
+
+ACTOR MinotaurDTFSpot : CustomMonsterInvasionSpot 15741
+{DropItem MinotaurDTF}
+
+ACTOR AvatarSpot : CustomMonsterInvasionSpot 15078
+{DropItem Avatar}

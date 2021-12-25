@@ -1,0 +1,201 @@
+//Decorate data base of rain and snow enviroment.
+//Todo: Can be cleared to compact and save space.
+
+/*
+ *   ZDoom Rain
+ *	  DECORATE LUMP
+ *
+ *			- Zippy
+ *
+ *	  Bonus Snow example stuff is included at the very bottom
+ */
+
+//
+// RainDrop is a rain drop (Sorry i could not resist 
+// on commenting on that line but damn that made me laugh! *wario*)
+// It falls, splashes, and disappears.
+// It is spawned by the rain drop generator actors and is not meant
+// to be used alone.  Can be used as a base class for new types of
+// rain drops, as exampled with a later entry
+//
+
+ACTOR RainDrop 24600
+{
+	Radius 8
+	Height 1
+	Mass 5
+	RenderStyle ADD
+	+CLIENTSIDEONLY 
+	+NOBLOCKMAP
+	+NOTELEPORT
+	+INVULNERABLE
+	+DONTSPLASH
+	+CORPSE	   
+	+NONSHOOTABLE
+	States
+	{
+	Spawn:
+		RAIN A -1  
+		Stop
+	Crash:	
+		RAIN BC 2
+		Stop
+	}
+}
+
+ACTOR RainDrop2 24602
+{
+	Radius 12
+	Height 1
+	Mass 5
+	RenderStyle ADD
+	scale 1.5
+	+CLIENTSIDEONLY 
+	+NOBLOCKMAP
+	+NOTELEPORT
+	+INVULNERABLE
+	+DONTSPLASH
+	+CORPSE	   
+	+NONSHOOTABLE
+	States
+	{
+	Spawn:
+		RAIN A -1  
+		Stop
+	Crash:	
+		RAIN BC 2
+		Stop
+	}
+}
+
+ACTOR RainBase 24601
+{
+	Radius 16
+	Height 6
+	RenderStyle NONE
+	+CLIENTSIDEONLY 
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+NOLIFTDROP
+	+NOTELEPORT
+	+INVULNERABLE
+	+SPAWNCEILING
+	+NONSHOOTABLE
+	+NOCLIP
+	States  
+	{
+	Spawn:
+		TNT1 A 1
+		Stop
+	}
+}
+
+
+ACTOR SnowFlake : RainDrop 24603
+{
+	Scale 0.3
+	+NOGRAVITY // No gravity so we can control its fall speed with ThrustThingZ
+	+CLIENTSIDEONLY 
+	States
+	{
+	Spawn:
+		SNOW A 0
+		SNOW A 1 ThrustThingZ(0,4,1,0)	// Arg 2 is the downward speed, I
+		SNOW A 8 A_Jump(92,2)			// find 2 gives nice gentle snow
+		SNOW A 8 A_CStaffMissileSlither
+		SNOW A 8				// Slither makes it shake a little rather than
+		Goto Spawn+2			// fall down straight vertically
+	Crash:
+		SNOW A 16
+		Stop
+	}
+}
+
+ACTOR SnowFlake2 : RainDrop 24604
+{
+	Scale 0.8
+	PROJECTILE
+	+NOGRAVITY // No gravity so we can control its fall speed with ThrustThingZ
+	+CLIENTSIDEONLY 
+	States
+	{
+	Spawn:
+		SNOW A 0
+		SNOW A 1 ThrustThingZ(0,32,1,0) // Graceful like a GAZELLE
+		SNOW A -1 ThrustThing((angle*256)/360,16,0,0)
+		Stop
+	Crash:
+		SNOW A 16
+		Stop
+	}
+}
+
+actor Snowingslow 
+{
+	Radius 64
+	Height 1
+	Speed 0
+	Mass 9999999
+	SCALE 1.5
+	+SPAWNCEILING
+	+NOGRAVITY
+	+CORPSE
+	States
+	{
+	Spawn:
+		TNT1 A 20 A_SpawnItemEX("Snowflake", Random(-1000,1000), Random(-1000,1000), 0, 0, 0, 0, 0, 128, SXF_CLIENTSIDE)
+		Loop
+	}
+}
+
+actor Snowingfast 
+{
+	Radius 64
+	Height 1
+	Speed 0
+	Mass 9999999
+	SCALE 1.5
+	+SPAWNCEILING
+	+NOGRAVITY
+	+CORPSE
+	States
+	{
+	Spawn:
+		TNT1 A 10 A_SpawnItemEX("Snowflake2", Random(-1000,1000), Random(-1000,1000), 0, 0, 0, 0, 0, 128, SXF_CLIENTSIDE)
+		Loop
+	}
+}
+
+actor Rainslow 
+{
+	Radius 64
+	Height 1
+	Speed 0
+	Mass 9999999
+	+SPAWNCEILING
+	+NOGRAVITY
+	+CORPSE
+	States
+	{
+	Spawn:
+		TNT1 A 25 A_SpawnItemEX("Raindrop", Random(-1000,1000), Random(-1000,1000), 0, 0, 0, 0, 0, 128, SXF_CLIENTSIDE)
+		Loop
+	}
+}
+
+actor Rainfast 
+{
+	Radius 64
+	Height 1
+	Speed 0
+	Mass 9999999
+	+SPAWNCEILING
+	+NOGRAVITY
+	+CORPSE
+	States
+	{
+	Spawn:
+		TNT1 A 13 A_SpawnItemEX("Raindrop2", Random(-1000,1000), Random(-1000,1000), 0, 0, 0, 0, 0, 128, SXF_CLIENTSIDE)
+		Loop
+	}
+}

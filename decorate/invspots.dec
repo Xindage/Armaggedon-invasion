@@ -1,56 +1,10 @@
-ACTOR DiscipleSpawner : CustomMonsterInvasionSpot 12344
-{
-DropItem Disciple
-}
-
-ACTOR DeathKnightSpawner : CustomMonsterInvasionSpot 13346
-{
-DropItem DeathKnight
-}
-
-actor AscoSpot : CustomMonsterInvasionSpot 10000
-{
-DropItem AssaultCommander
-}
-
-actor EnforcerSpot : CustomMonsterInvasionSpot 10003
-{
-DropItem Enforcer
-}
-
-actor OctopusSpot : CustomMonsterInvasionSpot 10005
-{
-DropItem Octabrain
-}
-
-actor PigcopSpot : CustomMonsterInvasionSpot 10006
-{
-DropItem Pigcop
-}
-
-actor WarlordSpot : CustomMonsterInvasionSpot 10007
-{
-DropItem Battlelord
-}
-
-actor OverlordSpot : CustomMonsterInvasionSpot 10008
-{
-DropItem Overlord
-}
-
-actor CycloidEmperorSpot : CustomMonsterInvasionSpot 10009
-{
-DropItem CycloidEmperor
-}
+//Decorate data base for the spawners listed by dec.
+//Temporary, should be moved to its own class dec.
+//monbaron.dec start
 
 actor BruiserSpot : CustomMonsterInvasionSpot 12340
 {
 DropItem BruiserDemon
-}
-
-actor AgathoSpot : CustomMonsterInvasionSpot 12341
-{
-DropItem AgathoDemon
 }
 
 actor ZombieMarineSpot : CustomMonsterInvasionSpot 12342
@@ -63,24 +17,9 @@ actor DiabloistSpot : CustomMonsterInvasionSpot 12343
 DropItem Diabloist
 }
 
-actor HellsergeantSpot : CustomMonsterInvasionSpot 10010
-{
-DropItem Hellsergeant
-}
-
-actor KnightDTFSpot : CustomMonsterInvasionSpot 10012
-{
-DropItem KnightDTF
-}
-
 actor SkeletonArcherSpot : CustomMonsterInvasionSpot 12350
 {
 DropItem SkeletonArcher
-}
-
-actor SandDemonSpot : CustomMonsterInvasionSpot 12351
-{
-DropItem SandDemon
 }
 
 actor BruteSpot : CustomMonsterInvasionSpot 12352
@@ -98,16 +37,6 @@ actor StoneGolemSpot : CustomMonsterInvasionSpot 12354
 DropItem StoneGolem
 }
 
-actor LightningSentrySpot : CustomMonsterInvasionSpot 12361
-{
-DropItem LightningSentry
-}
-
-actor sdorbSentrySpot : CustomMonsterInvasionSpot 12362
-{
-DropItem sdorb
-}
-
 actor SmallermastermindSpot : CustomMonsterInvasionSpot 12364
 {
 DropItem Smallermastermind
@@ -123,34 +52,9 @@ actor LightningcoreSpot : CustomMonsterInvasionSpot 12365
 DropItem Lightningcore
 }
 
-actor IcedemonSpot : CustomMonsterInvasionSpot 12367
-{
-DropItem Icedemon
-}
-
-actor CrusaderDTFSpot : CustomMonsterInvasionSpot 12369
-{
-DropItem CrusaderDTF
-}
-
-actor ReaverDTFSpot : CustomMonsterInvasionSpot 12370
-{
-DropItem ReaverDTF
-}
-
-actor Inquisitor2Spot : CustomMonsterInvasionSpot 12371
-{
-DropItem Inquisitor2
-}
-
 actor HarvesterSpot : CustomMonsterInvasionSpot 15070
 {
 DropItem SoulHarvester
-}
-
-actor CacolichSpot : CustomMonsterInvasionSpot 15071
-{
-DropItem Cacolich
 }
 
 actor AnubisSpot : CustomMonsterInvasionSpot 15072
@@ -168,11 +72,6 @@ actor JitterSpot : CustomMonsterInvasionSpot 12349
 DropItem Clowny
 }
 
-ACTOR AvatarSpot : CustomMonsterInvasionSpot 15078
-{
-DropItem Avatar
-}
-
 ACTOR CyberBaronSpot : CustomMonsterInvasionSpot 15099
 {
 DropItem CyberBaron
@@ -181,11 +80,6 @@ DropItem CyberBaron
 ACTOR GreaterBaronSpot : CustomMonsterInvasionSpot 15100
 {
 DropItem GreaterBaron
-}
-
-actor IllusSpot : CustomMonsterInvasionSpot 15102
-{
-DropItem Illus
 }
 
 actor GreaterCyberBaronSpot : CustomMonsterInvasionSpot 15103
@@ -316,11 +210,6 @@ DropItem Seaguard2
 actor ScourgeSpot : CustomMonsterInvasionSpot 15740
 {
 DropItem Scourge
-}
-
-ACTOR MinotaurDTFSpot : CustomMonsterInvasionSpot 15741
-{
-DropItem MinotaurDTF
 }
 
 ACTOR KamikaziSpot : CustomMonsterInvasionSpot 15742

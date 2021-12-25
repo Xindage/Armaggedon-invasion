@@ -575,3 +575,26 @@ ACTOR DukeRocket2
 	}
 }
 
+// --->
+// Invasion Spawn Spots
+// --->
+actor PigcopSpot : CustomMonsterInvasionSpot 10006
+{DropItem Pigcop}
+
+actor EnforcerSpot : CustomMonsterInvasionSpot 10003
+{DropItem Enforcer}
+
+actor OctopusSpot : CustomMonsterInvasionSpot 10005
+{DropItem Octabrain}
+
+actor AscoSpot : CustomMonsterInvasionSpot 10000
+{DropItem AssaultCommander}
+
+actor WarlordSpot : CustomMonsterInvasionSpot 10007
+{DropItem Battlelord}
+
+actor OverlordSpot : CustomMonsterInvasionSpot 10008
+{DropItem Overlord}
+
+actor CycloidEmperorSpot : CustomMonsterInvasionSpot 10009
+{DropItem CycloidEmperor}
