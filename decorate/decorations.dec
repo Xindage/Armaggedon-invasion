@@ -1,3 +1,25 @@
+Plant
+{ 
+	DoomEdNum 21031
+	Sprite PLT1
+	scale 1.5
+	Solid
+	Frames "A" 
+	Radius 32 
+	Height 40
+}
+
+Plant2
+{ 
+	DoomEdNum 21032
+	Sprite PLT2
+	scale 1.5
+	Solid
+	Frames "A" 
+	Radius 32 
+	Height 40
+}
+
 Actor JungleTree1 30103
 {
 	Height 60
@@ -238,6 +260,20 @@ ACTOR Oraclez 25700
 	{
 	Spawn:
 		ORCL A -1
+		stop
+	}
+}
+
+
+Actor Budha 30113
+{
+	Height 200
+	Radius 50
+	+SOLID
+	states
+	{
+	Spawn:
+		BUDH A -1
 		stop
 	}
 }

@@ -12,31 +12,6 @@ actor ZombieMarineSpot : CustomMonsterInvasionSpot 12342
 DropItem ZombieMarine
 }
 
-actor DiabloistSpot : CustomMonsterInvasionSpot 12343
-{
-DropItem Diabloist
-}
-
-actor SkeletonArcherSpot : CustomMonsterInvasionSpot 12350
-{
-DropItem SkeletonArcher
-}
-
-actor BruteSpot : CustomMonsterInvasionSpot 12352
-{
-DropItem Brute
-}
-
-actor GolemRiderSpot : CustomMonsterInvasionSpot 12353
-{
-DropItem GolemRider
-}
-
-actor StoneGolemSpot : CustomMonsterInvasionSpot 12354
-{
-DropItem StoneGolem
-}
-
 actor SmallermastermindSpot : CustomMonsterInvasionSpot 12364
 {
 DropItem Smallermastermind
@@ -55,16 +30,6 @@ DropItem Lightningcore
 actor HarvesterSpot : CustomMonsterInvasionSpot 15070
 {
 DropItem SoulHarvester
-}
-
-actor AnubisSpot : CustomMonsterInvasionSpot 15072
-{
-DropItem Anubis
-}
-
-actor EyesoreSpot : CustomMonsterInvasionSpot 12348
-{
-DropItem Eyesore
 }
 
 actor JitterSpot : CustomMonsterInvasionSpot 12349
@@ -195,21 +160,6 @@ DropItem Watcher
 ACTOR BoneDragonSpot : CustomMonsterInvasionSpot 15737
 {
 DropItem BoneDragon
-}
-
-actor SeaguardSpot : CustomMonsterInvasionSpot 15738
-{
-DropItem Seaguard
-}
-
-actor Seaguard2Spot : CustomMonsterInvasionSpot 15739
-{
-DropItem Seaguard2
-}
-
-actor ScourgeSpot : CustomMonsterInvasionSpot 15740
-{
-DropItem Scourge
 }
 
 ACTOR KamikaziSpot : CustomMonsterInvasionSpot 15742

@@ -1,0 +1,93 @@
+//------------\\
+// Map09 Boss \\
+//------------\\
+ACTOR BlackHeart
+{
+  OBITUARY "%o was drained by the evil heart."
+  Health 13000
+  Radius 20
+  Height 56
+  Mass 9999999999999999
+  Speed 0
+  MONSTER
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  bloodcolor "black"
+  DeathSound "brain/death"
+  +LOOKALLAROUND
+  +QUICKTORETALIATE
+  scale 2.0
+  states
+  {
+  Spawn:
+    PHRT AB 10 A_Look
+    Loop
+  See:
+    PHRT A 0 A_JumpIfInventory("Cell", 20, "See2")
+    PHRT AABBCCDD 5 A_Chase
+    Loop
+  See2:
+      PHRT A 0 A_JumpIfInventory("Clip", 20, "See3")
+     PHRT AABBCCDD 4 A_Chase
+    Loop
+    See3:
+      PHRT A 0 A_JumpIfInventory("Shell", 20, "See4")
+     PHRT AABBCCDD 3 A_Chase
+    Loop
+    See4:
+     PHRT AABBCCDD 2 A_Chase
+    Loop
+  Missile:
+      PHRT D 0 A_JumpIfInventory("Clip", 20, "Missile2")
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 0)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -10)
+    PHRT D 1 A_CustomMissile("AvaFireBall", 10, 0, 10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 20)
+    PHRT D 1 A_CustomMissile("AvaFireBall", 10, 0, -20)
+  goto see
+   Missile2:
+      PHRT D 0 A_JumpIfInventory("Cell", 20, "Missile3")
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 0)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 20)
+    PHRT D 1 A_CustomMissile("AvaFireBall", 10, 0, -20)
+        PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 30)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -30)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 40)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -40)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 50)
+    PHRT D 1 A_CustomMissile("AvaFireBall", 10, 0, -50)
+    goto see
+   Missile3:
+      PHRT D 0 A_JumpIfInventory("Shell", 20, "Missile4")
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 0)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 20)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -20)
+    PHRT D 1 A_CustomMissile("AvaFireBallbig", 10, 0, 0)
+    goto see
+    Missile4:
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 10)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 20)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -20)
+    PHRT D 1 A_CustomMissile("AvaFireBallbig", 10, 0, 0)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 30)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -30)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 40)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, -40)
+    PHRT D 0 A_CustomMissile("AvaFireBall", 10, 0, 50)
+    PHRT D 1 A_CustomMissile("AvaFireBall", 10, 0, -50)
+    goto see
+    Death:
+    PHRT E 1 A_Scream
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx("Coredeath", random(-200,200),random(-200,800), random(-50,128), 0,0,0,0,128,0)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx("Coredeath", random(-200,200),random(-200,800), random(-50,128), 0,0,0,0,128,0)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx("Coredeath", random(-200,200),random(-200,800), random(-50,128), 0,0,0,0,128,0)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx("Coredeath", random(-200,200),random(-200,800), random(-50,128), 0,0,0,0,128,0)
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_SpawnItemEx("Coredeath", random(-200,200),random(-200,800), random(-50,128), 0,0,0,0,128,0)
+    stop
+  }
+}

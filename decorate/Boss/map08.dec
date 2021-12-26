@@ -1,0 +1,334 @@
+//------------\\
+// Map08 Boss \\
+//------------\\
+ACTOR Tchernosomething 29545
+{
+  OBITUARY "%o was assassinated by Tchernobog."
+  Health 11000
+  radius 54
+  height 168
+  Mass 10000000000
+  Speed 25
+  PainChance 0
+  SEESOUND "TJERSIT"
+  DEATHSOUND "TJERDTH"
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +BOSS
+  scale 1.8
+  MONSTER
+  states
+  {
+  Spawn:
+    TCHR AB 10 A_Look
+    loop
+  See:
+    TCHR A 3 A_playsound("tjerhoof")
+    TCHR A 3 A_Chase
+    TCHR BB 3 A_Chase
+    TCHR C 3 A_playsound("tjerhoof")
+    TCHR C 3 A_Chase
+    TCHR DD 3 A_Chase
+    loop
+  Missile:
+    TCHR E 0 A_JumpIfInventory("Cell", 20, "Missile2")
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    goto See
+  Missile2:
+    TCHR E 0 A_JumpIfInventory("Clip", 20, "Missile3")
+    TCHR E 0 A_jump(100,7)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    goto See 
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotgreen", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotgreen", 80, 0, 0)
+    goto see
+     Missile3:
+    TCHR E 0 A_JumpIfInventory("Shell", 20, "Missile4")
+    TCHR E 0 A_jump(100,8)
+    TCHR E 0 A_jump(150,11)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    goto See
+     TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotgreen", 80, 0, 0)
+         TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotgreen", 80, 0, 0)
+    goto see
+        TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotyellow", 80, 0, 0)
+    goto see
+    Missile4:
+    TCHR E 0 A_jump(70,15)
+    TCHR E 0 A_jump(100,8)
+    TCHR E 0 A_jump(150,11)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+    TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshot", 80, 0, 0)
+     goto See
+     TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotgreen", 80, 0, 0)
+         TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotgreen", 80, 0, 0)
+    goto see
+        TCHR E 12 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotyellow", 80, 0, 0)
+    goto See
+        TCHR EEEEEEEE 5 A_FaceTarget
+    TCHR F 12 A_CustomMissile("skullshotred", 80, 0, 0)
+    loop
+  Death:
+    TCHR H 10
+    TCHR I 10 A_Scream
+    TCHR JKL 10
+    TCHR M 10 A_NoBlocking
+    TCHR NO 10
+    TCHR P 30
+    TCHR P -1 A_BossDeath
+  }
+}
+
+actor skullshot
+{
+  Radius 16
+  Height 6
+  Speed 20
+  Damage 20
+  Projectile
+  +RANDOMIZE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  States
+  {
+  Spawn:
+    BALZ AB 4 bright
+    loop
+  Death:
+	DNEX A 3 Bright A_explode
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+actor skullshotred
+{
+  Radius 32
+  Height 10
+  Obituary "%o joined the underworld."
+  scale 2.0
+  Speed 40
+  Damage 100
+  Projectile
+  +RANDOMIZE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  translation "0:247=176:184"
+  States
+  {
+  Spawn:
+    BALZ AB 4 bright
+    loop
+  Death:
+	DNEX A 3 Bright A_explode
+        DNEX A 0 Bright A_CustomMissile("skullshotred2",0,0,0,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred2",0,0,60,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred2",0,0,120,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred2",0,0,180,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred2",0,0,240,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred2",0,0,300,2)
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+actor skullshotred2
+{
+  Radius 16
+  Height 6
+  Speed 20
+  Damage 20
+  Projectile
+  +RANDOMIZE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  translation "0:247=176:184"
+  States
+  {
+  Spawn:
+    BALZ ABABAB 4 bright
+     	DNEX A 0 Bright A_CustomMissile("skullshotred3",0,0,0,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred3",0,0,60,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred3",0,0,120,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred3",0,0,180,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred3",0,0,240,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotred3",0,0,300,2)
+    loop
+  Death:
+	DNEX A 3 Bright A_explode
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+actor skullshotred3
+{
+  Radius 8
+  Height 3
+  scale 0.5
+  Speed 20
+  Damage 5
+  Projectile
+  +RANDOMIZE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  translation "0:247=176:184"
+  States
+  {
+  Spawn:
+    BALZ AB 4 bright
+    loop
+  Death:
+	DNEX A 3 Bright 
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+actor skullshotyellow
+{
+  Radius 16
+  Height 6
+  Speed 20
+  Damage 20
+  Projectile
+  +RANDOMIZE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  translation "0:247=225:231"
+  States
+  {
+  Spawn:
+    BALZ ABABABABAB 4 bright
+     	DNEX A 0 Bright A_CustomMissile("skullshotyellow2",0,0,0,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotyellow2",0,0,60,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotyellow2",0,0,120,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotyellow2",0,0,180,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotyellow2",0,0,240,2)
+      	DNEX A 0 Bright A_CustomMissile("skullshotyellow2",0,0,300,2)
+    loop
+  Death:
+	DNEX A 3 Bright A_explode
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+actor skullshotyellow2
+{
+  Radius 8
+  Height 3
+  scale 0.5
+  Speed 20
+  Damage 5
+  Projectile
+  +RANDOMIZE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  translation "0:247=225:231"
+  States
+  {
+  Spawn:
+    BALZ AB 4 bright
+    loop
+  Death:
+	DNEX A 3 Bright 
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+actor skullshotgreen
+{
+  Radius 16
+  Height 6
+  Speed 14
+  Damage 10
+  Projectile
+  +RANDOMIZE
+  +SEEKERMISSILE
+  RENDERSTYLE Add
+  SeeSound "DSSKLAIR"
+  DeathSound "DSCAREXP"
+  translation "0:247=112:124"
+  States
+  {
+  Spawn:
+    BALZ AB 4 bright A_SeekerMissile(30,30) 
+    loop
+  Death:
+	DNEX A 3 Bright A_explode
+	DNEX A 0 A_scream
+	DNEX BCDEFGHIJKLMNOPQRSTU 3 bright 
+    stop
+  }
+}
+
+ACTOR Thrall6 25701
+{
+MONSTER
+Radius 20 
+Height 52
+DEATHSOUND "shotgut/death"
+health 100000
+MASS 9999999999
+translation "116:124=80:90"
+  states
+  {
+  Spawn:
+    CULT F 2
+    loop
+      See:
+    CULT F 2
+          Missile:
+    CULT F 2
+    loop
+       Death: 
+       CULT H 8 
+       CULT I 8 A_Scream
+       CULT J 8 
+       CULT K 8 A_NoBlocking 
+       CULT L 8 
+       CULT M -1 
+       Stop
+    }
+}

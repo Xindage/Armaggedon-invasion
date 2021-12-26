@@ -1,0 +1,620 @@
+//------------\\
+// Map12 Boss \\
+//------------\\
+actor WaterElemental
+{
+    Health 20000
+    Radius 80
+    Height 200
+    Speed 15
+    PainChance 0
+    MeleeDamage 10
+    mass 99999999
+    Scale 1.5
+    MONSTER 
+    +MISSILEMORE
+    +MISSILEEVENMORE
+    +FLOORCLIP
+    +BOSS
+    +NOTARGET
+    Obituary "%o Stood no chance against the Serpentqueen"
+    Deathsound "WATERDI"
+    States
+    {
+    Spawn:
+        WTRE A 20 A_Look
+        Loop
+    See:
+        WTRE BCDEFGH 3 A_Chase
+        Goto See
+    Missile:
+    	WTRE A 0 A_JumpIfInventory("Clip", 80, "Missile2")
+	WTRE A 0 A_FaceTarget
+	WTRE A 0 A_Jump (256,"Spread","Beam","Energyball")
+    Spread:
+      	WTRE IJK 8 A_Facetarget
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,0)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,-15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,-30)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,-45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,-23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,-53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble4",220,0,53)
+      WTRE L 4 A_CustomMissile("GiantEnergyBubble4",220,0,30)
+      WTRE MNO 4 A_Facetarget
+      goto see
+    Beam:
+    	WTRE IJK 4 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+        WTRE L 0 A_Facetarget
+     	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 4 A_CustomMissile("AgathoDemonTracer2",220,0,0,0)
+    	WTRE MNO 4 A_Facetarget
+    goto see
+    Energyball:
+    	WTRE WXY 8 A_Facetarget
+    	WTRE Y 8 A_CustomMissile("GiantEnergyBubble3",300,50,0)
+    	WTRE YXW 8 A_Facetarget
+       goto see
+    Missile2:
+    	WTRE A 0 A_JumpIfInventory("Cell", 20,"Missile3")
+	WTRE A 0 A_FaceTarget
+	WTRE A 0 A_Jump (256,"Spread2","Beam2","Energyball2","Summon2")
+    Spread2:
+      	WTRE IJK 8 A_Facetarget
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,0)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-30)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,8)
+      WTRE L 4 A_CustomMissile("GiantEnergyBubble44",220,0,30)
+      WTRE MNO 4 A_Facetarget
+      WTRE IJK 8 A_Facetarget
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,0)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-30)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,-8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble44",220,0,8)
+      WTRE L 4 A_CustomMissile("GiantEnergyBubble44",220,0,30)
+      WTRE MNO 4 A_Facetarget
+      goto see
+    Beam2:
+    	WTRE IJK 4 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+        WTRE L 0 A_Facetarget
+     	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+        WTRE L 0 A_Facetarget
+     	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 3 A_CustomMissile("AgathoDemonTracer3",220,0,0,0)
+    	WTRE MNO 4 A_Facetarget
+    goto see
+    Energyball2:
+    	WTRE WXY 8 A_Facetarget
+    	WTRE Y 8 A_CustomMissile("GiantEnergyBubble33",300,50,0)
+    	WTRE YXW 8 A_Facetarget
+       goto see
+    Summon2:
+    	WTRE WXY 8 A_Facetarget
+    	WTRE Y 8 A_CustomMissile("GiantEnergyBubble999",300,50,0)
+    	WTRE YXW 8 A_Facetarget
+       goto see
+ Missile3:
+	WTRE A 0 A_FaceTarget
+	WTRE A 0 A_Jump (256,"Energyball3","Spread3","Beam3","Blast3","Summon3")
+       goto see
+           Spread3:
+      	WTRE IJK 8 A_Facetarget
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,0)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-30)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-4)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,4)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-11)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,11)
+      WTRE L 4 A_CustomMissile("GiantEnergyBubble444",220,0,30)
+      WTRE MNO 4 A_Facetarget
+      WTRE IJK 8 A_Facetarget
+  WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,0)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-30)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-4)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,4)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-11)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,11)
+      WTRE L 4 A_CustomMissile("GiantEnergyBubble444",220,0,30)
+      WTRE MNO 4 A_Facetarget
+      WTRE IJK 8 A_Facetarget
+  WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,0)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,15)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-30)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-45)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-60)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,23)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,37)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,53)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,8)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-4)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,4)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,-11)
+      WTRE L 0 A_CustomMissile("GiantEnergyBubble444",220,0,11)
+      WTRE L 4 A_CustomMissile("GiantEnergyBubble444",220,0,30)
+      WTRE MNO 4 A_Facetarget
+      goto see
+    Beam3:
+    	WTRE IJK 4 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+        	WTRE L 0 A_Facetarget
+     	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE L 2 A_CustomMissile("AgathoDemonTracer4",220,0,0,0)
+    	WTRE L 0 A_Facetarget
+    	WTRE MNO 4 A_Facetarget
+    goto see
+    Energyball3:
+    	WTRE WXY 8 A_Facetarget
+    	WTRE Y 8 A_CustomMissile("GiantEnergyBubble333",300,50,0)
+    	WTRE YXW 8 A_Facetarget
+       goto see
+    Summon3:
+    	WTRE WXY 8 A_Facetarget
+    	WTRE Y 8 A_CustomMissile("GiantEnergyBubble9999",300,50,0)
+    	WTRE YXW 8 A_Facetarget
+       goto see
+    Blast3:
+       WTRE IJK 8 A_Facetarget
+       WTRE L 0 A_CustomMissile("AvaFireBallbig2",220,0,0)
+       WTRE MNO 8 A_Facetarget
+       goto see
+    Death:
+        WTRE W 6 A_Scream
+        WTRE XYZ 6
+        WTRD A 6 A_Fall
+	WTRD A 0 ACS_Execute(914,0)
+        WTRD B -1 A_BossDeath
+        Stop
+    }
+}
+
+Actor GiantEnergyBubble3
+{
+PROJECTILE
+Damage 8
+Radius 24
+Height 40
+Translation "192:192=161:161", "81:108=161:167"
+Speed 0
+Alpha 0.6
+renderstyle add
+Deathsound "DSBUBEX"
+States
+{
+Spawn:
+GBUB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 4 bright A_CustomMissile("GiantEnergyBubble4",0,0,random(0,360),CMF_AIMDIRECTION,random(-40,-20))
+Death:
+GBUB E 2 A_CustomMissile("EnergyBubble5", 0, 0, random(0,360), 2, random(-50,50))
+GBUB F 2 A_CustomMissile("EnergyBubble5", 0, 0, random(0,360), 2, random(-50,50))
+GBUB G 2 A_CustomMissile("EnergyBubble5", 0, 0, random(0,360), 2, random(-50,50))
+GBUB H 2 A_CustomMissile("EnergyBubble5", 0, 0, random(0,360), 2, random(-50,50))
+GBUB I 2 A_CustomMissile("EnergyBubble5", 0, 0, random(0,360), 2, random(-50,50))
+Stop
+}
+}
+
+
+Actor GiantEnergyBubble33
+{
+PROJECTILE
+Damage 8
+Radius 24
+Height 40
+Speed 0
+Alpha 0.6
+renderstyle add
+Deathsound "DSBUBEX"
+States
+{
+Spawn:
+GBUB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 2 bright A_CustomMissile("GiantEnergyBubble44",0,0,random(0,360),CMF_AIMDIRECTION,random(-40,-20))
+Death:
+GBUB E 2 A_CustomMissile("EnergyBubble", 0, 0, random(0,360), 2, random(-50,50))
+GBUB F 2 A_CustomMissile("EnergyBubble", 0, 0, random(0,360), 2, random(-50,50))
+GBUB G 2 A_CustomMissile("EnergyBubble", 0, 0, random(0,360), 2, random(-50,50))
+GBUB H 2 A_CustomMissile("EnergyBubble", 0, 0, random(0,360), 2, random(-50,50))
+GBUB I 2 A_CustomMissile("EnergyBubble", 0, 0, random(0,360), 2, random(-50,50))
+Stop
+}
+}
+
+Actor GiantEnergyBubble333
+{
+PROJECTILE
+Damage 8
+Radius 24
+Height 40
+Speed 0
+Alpha 0.6
+Translation "192:192=175:175", "81:108=175:191"
+renderstyle add
+Deathsound "DSBUBEX"
+States
+{
+Spawn:
+GBUB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 1 bright A_CustomMissile("DFlare",0,0,random(0,360),CMF_AIMDIRECTION,random(-40,-20))
+Death:
+GBUB E 2 A_CustomMissile("EnergyBubble66", 0, 0, random(0,360), 2, random(-50,50))
+GBUB F 2 A_CustomMissile("EnergyBubble66", 0, 0, random(0,360), 2, random(-50,50))
+GBUB G 2 A_CustomMissile("EnergyBubble66", 0, 0, random(0,360), 2, random(-50,50))
+GBUB H 2 A_CustomMissile("EnergyBubble66", 0, 0, random(0,360), 2, random(-50,50))
+GBUB I 2 A_CustomMissile("EnergyBubble66", 0, 0, random(0,360), 2, random(-50,50))
+Stop
+}
+}
+
+Actor GiantEnergyBubble99 : GiantEnergyBubble3
+{
+PROJECTILE
+-NOGRAVITY
+Damage 0
+Radius 24
+Height 40
+Translation "192:192=161:161", "81:108=161:167"
+Speed 15
+Alpha 0.6
+renderstyle add
+Deathsound "DSBUBEX"
+States
+{
+Spawn:
+GBUB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 4 bright
+Death:
+GBUB E 2 A_CustomMissile("Seaguard2", 60, 0, 0)
+
+Stop
+}
+}
+
+
+Actor GiantEnergyBubble999 : GiantEnergyBubble33
+{
+PROJECTILE
+-NOGRAVITY
+Damage 0
+Radius 24
+Height 40
+Speed 15
+Alpha 0.6
+renderstyle add
+Deathsound "DSBUBEX"
+States
+{
+Spawn:
+GBUB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 4 bright
+Death:
+GBUB E 2 A_CustomMissile("Seaguard2", 60, 0, 0)
+Stop
+}
+}   
+
+
+Actor GiantEnergyBubble9999 : GiantEnergyBubble333
+{
+PROJECTILE
+-NOGRAVITY
+Damage 0
+Radius 24
+Height 40
+Speed 15
+Alpha 0.6
+renderstyle add
+Deathsound "DSBUBEX"
+States
+{
+Spawn:
+GBUB ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD 4 bright
+Death:
+GBUB E 2 A_CustomMissile("BruiserDemon", 60, 0, 0)
+Stop
+}
+}  

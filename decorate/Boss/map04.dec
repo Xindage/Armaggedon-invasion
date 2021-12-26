@@ -1,0 +1,73 @@
+//------------\\
+// Map04 Boss \\
+//------------\\
+// Clowny made by .+:icytux:+.
+Actor Clowny 5163
+{
+health 8000
+radius 32
+height 60
+floatspeed 18
+Speed 18
+scale 0.5
+RENDERSTYLE Add
+meleedamage 100
+mass 99999999999
+Seesound "ghoul2/death"
+Deathsound "ghoul2/death"
+MONSTER
++FLOAT
++BOSS
++NOGRAVITY
++NOCLIP
++LOOKALLAROUND
+Painchance 0
+Obituary "%o thought %g saw Clowny."
+States
+{
+Spawn:
+GHL2 A 10 A_Look
+loop
+See:
+GHL2 A 1 A_Chase
+GHL2 A 0 A_Settranslucent(0.1,0)
+GHL2 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_Chase
+GHL2 B 0 A_Settranslucent(0.2,0)
+GHL2 BB 1 A_Chase
+GHL2 B 0 A_Settranslucent(0.3,0)
+GHL2 BB 1 A_Chase
+GHL2 B 0 A_Settranslucent(0.4,0)
+GHL2 BB 1 A_Chase
+GHL2 B 0 A_Settranslucent(0.5,0)
+GHL2 AA 1 A_Chase
+GHL2 A 0 A_Settranslucent(0.4,0)
+GHL2 AA 1 A_Chase
+GHL2 A 0 A_Settranslucent(0.3,0)
+GHL2 AA 1 A_Chase
+GHL2 A 0 A_Settranslucent(0.2,0)
+GHL2 AA 1 A_Chase
+loop
+Melee:
+GHL2 A 0 A_Settranslucent(0.5,0)
+GHL2 A 0 A_Facetarget
+GHL2 A 0 A_Playsound("ghoul2/death")
+GHL2 A 4 A_MeleeAttack
+goto see
+Death:
+GHL2 A 0 A_Settranslucent(0.4,0)
+GHL2 A 0 A_Die
+GHL2 A 0 A_Fall
+GHL2 A 50 A_Scream
+GHL2 AAAAAAAAAAAAAAAA 0 A_CustomMissile("ArchvileFirex3", 0,0,random(0,360), 2,0)
+GHL2 A 5 A_Fadeout(0.1)
+GHL2 A 5 A_Fadeout(0.1)
+GHL2 A 5 A_Fadeout(0.1)
+GHL2 A 5 A_Fadeout(0.1)
+stop
+}
+}
+
+ACTOR ArchvileFirex3 : ArchvileFirex
+{
+	translation "160:167=96:111"
+}
