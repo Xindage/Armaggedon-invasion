@@ -108,7 +108,7 @@ ACTOR Brute
 	PainChance 5
 	MONSTER
 	+DROPOFF
-	+DONTTHRUST
+//	+DONTTHRUST
 	+NOICEDEATH
 	DropItem "LifeEssence" 75
 	DropItem "ArmorBonusMax" 75
@@ -221,7 +221,7 @@ actor GolemRider
 	+MISSILEMORE
 	+DONTHARMSPECIES
 	+DROPOFF
-	+DONTTHRUST
+//	+DONTTHRUST
 	mass 10000
 	Obituary "%o was crushed by golem rider."
 	MeleeDamage 13
@@ -283,8 +283,8 @@ actor GolemRider
 		BOTA H 2 A_Recoil(-4)
 		BOTA H 0 A_FaceTarget
 		BOTA H 0 A_JumpIfCloser(256, "Charge")	
-		BOTA A 0 A_GiveInventory("GolemRiderToken",1)
-		BOTA A 0 A_JumpIfInventory("GolemRiderToken",5"See")
+		BOTA A 0 A_GiveInventory("GolemRiderToken", 1)
+		BOTA A 0 A_JumpIfInventory("GolemRiderToken", 5, "See")
 		Goto Missile
 	Charge:
 		BOTA A 0 A_PlaySound("bullchase")
@@ -611,32 +611,21 @@ ACTOR Eyesore
 		Stop
 	}
 }
-}
 
 // --->
 // Invasion Spawn Spots
 // --->
 actor SkeletonArcherSpot : CustomMonsterInvasionSpot 12350
-{
-DropItem SkeletonArcher
-}
+{DropItem SkeletonArcher}
 
 actor BruteSpot : CustomMonsterInvasionSpot 12352
-{
-DropItem Brute
-}
+{DropItem Brute}
 
 actor GolemRiderSpot : CustomMonsterInvasionSpot 12353
-{
-DropItem GolemRider
-}
+{DropItem GolemRider}
 
 actor AnubisSpot : CustomMonsterInvasionSpot 15072
-{
-DropItem Anubis
-}
+{DropItem Anubis}
 
 actor EyesoreSpot : CustomMonsterInvasionSpot 12348
-{
-DropItem Eyesore
-}
+{DropItem Eyesore}

@@ -1,7 +1,6 @@
 #INCLUDE "decorate/moncult.dec"
 #INCLUDE "decorate/mondoom.dec"
 #INCLUDE "decorate/monmachine.dec"
-#INCLUDE "decorate/bosses.dec"
 #INCLUDE "decorate/decorations.dec"
 #INCLUDE "decorate/monheretic.dec"
 //#INCLUDE "decorate/monbarons.dec"
@@ -10,3 +9,16 @@
 #INCLUDE "decorate/monothers.dec"
 //#INCLUDE "decorate/dec2.dec"
 //#INCLUDE "decorate/unused.dec"
+
+#INCLUDE "decorate/boss/map01.dec"
+#INCLUDE "decorate/boss/map02.dec"
+//#INCLUDE "decorate/boss/map03.dec" missing smoke
+//#INCLUDE "decorate/boss/map04.dec" has errors
+#INCLUDE "decorate/boss/map05.dec"
+#INCLUDE "decorate/boss/map06.dec"
+//#INCLUDE "decorate/boss/map07.dec"
+#INCLUDE "decorate/boss/map08.dec"
+#INCLUDE "decorate/boss/map09.dec"
+#INCLUDE "decorate/boss/map10.dec"
+#INCLUDE "decorate/boss/map11.dec"
+#INCLUDE "decorate/boss/map12.dec"

@@ -5,7 +5,7 @@
 // --->
 // Reaver
 // --->
-ACTOR Reaver~
+ACTOR Reaver~ replaces Reaver
 {  
 	Health 150
 	Radius 20
@@ -66,7 +66,7 @@ ACTOR Reaver~
 // --->
 // Crusader
 // --->
-ACTOR Crusader~
+ACTOR Crusader~ replaces Crusader
 {
 	Health 650
 	Radius 40
@@ -167,7 +167,7 @@ ACTOR Crusader~
 // Inquisitor
 // Should be standalone
 // --->
-ACTOR Inquisitor~ : Inquisitor 
+ACTOR Inquisitor~ : Inquisitor replaces Inquisitor
 {
 	Game Strife
 	Health 1000
@@ -266,10 +266,11 @@ actor LightningSentry
 	+FULLVOLDEATH
 	+MISSILEMORE
 	+DONTHURTSPECIES
-	+DONTTHRUST
+//	+DONTTHRUST
 	Speed 0
 	Scale 0.7
-	Mass 100
+//	Mass 100
+	Mass 100000
 	Species "Machines"
 	Damagefactor "Lightning", 0.0
 	Renderstyle translucent
@@ -417,13 +418,13 @@ actor sdorbplasmafx
 // Invasion Spawn Spots
 // --->
 actor SCrusaderSpot : CustomMonsterInvasionSpot 12369
-{DropItem Crusader~}
+{DropItem Crusader}
 
 actor SReaverSpot : CustomMonsterInvasionSpot 12370
-{DropItem Reaver~}
+{DropItem Reaver}
 
 actor SInquisitorSpot : CustomMonsterInvasionSpot 12371
-{DropItem Inquisitor~}
+{DropItem Inquisitor}
 
 actor sdorbSentrySpot : CustomMonsterInvasionSpot 12362
 {DropItem SDOrb}

@@ -15,7 +15,7 @@ actor AgonyElemental
 	+BOSS
 	+MISSILEMORE
 	+MISSILEEVENMORE
-	+DONTTHRUST
+//	+DONTTHRUST
 	+NOICEDEATH
 	seesound "AgonyElementalSee"
 	deathsound "AgonyElementalDeath"
