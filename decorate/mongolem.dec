@@ -16,7 +16,7 @@ actor StoneGolem
 	+FLOORCLIP
 	+THRUGHOST // Why?
 	+DONTHARMSPECIES
-	+DONTTHRUST
+//	+DONTTHRUST
 	renderstyle Translucent
 	alpha 1.0
 	Obituary "%o was crushed by a giant rock golem."

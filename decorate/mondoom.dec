@@ -434,7 +434,7 @@ ACTOR LichComet : Comet
 // So it'll be paired whit the original complex bestiary.
 // --->
 
-actor Agathodemon~ : Cacodemon~ replaces Agathodemon
+actor Agathodemon : Cacodemon~
 {
 //CD caco 600, Arm 650
 Health 750

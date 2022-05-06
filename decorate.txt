@@ -1,19 +1,26 @@
-#INCLUDE "decorate/moncult.dec"
-#INCLUDE "decorate/mondoom.dec"
-#INCLUDE "decorate/monmachine.dec"
+// -- Misc
+#INCLUDE "decorate/custon.dec"
 #INCLUDE "decorate/decorations.dec"
-#INCLUDE "decorate/monheretic.dec"
-//#INCLUDE "decorate/monbarons.dec"
-#INCLUDE "decorate/invspots.dec"
-#INCLUDE "decorate/mondoom.dec"
-#INCLUDE "decorate/monothers.dec"
-//#INCLUDE "decorate/dec2.dec"
+#INCLUDE "decorate/raindata.dec"
 //#INCLUDE "decorate/unused.dec"
 
+// -- Monsters
+#INCLUDE "decorate/mondoom.dec"
+//#INCLUDE "decorate/monbarons.dec"
+#INCLUDE "decorate/monduke.dec"
+#INCLUDE "decorate/monmachine.dec"
+#INCLUDE "decorate/moncult.dec"
+#INCLUDE "decorate/monheretic.dec"
+#INCLUDE "decorate/monothers.dec"
+#INCLUDE "decorate/mongolem.dec"
+#INCLUDE "decorate/monaqua.dec"
+#INCLUDE "decorate/invspots.dec"
+
+// -- Bosses
 #INCLUDE "decorate/boss/map01.dec"
 #INCLUDE "decorate/boss/map02.dec"
-//#INCLUDE "decorate/boss/map03.dec" missing smoke
-//#INCLUDE "decorate/boss/map04.dec" has errors
+#INCLUDE "decorate/boss/map03.dec"
+#INCLUDE "decorate/boss/map04.dec"
 #INCLUDE "decorate/boss/map05.dec"
 #INCLUDE "decorate/boss/map06.dec"
 //#INCLUDE "decorate/boss/map07.dec"

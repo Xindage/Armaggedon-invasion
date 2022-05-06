@@ -21,6 +21,27 @@ Stop
 }
 }
 
+actor Smokeeffect
+{
++ALLOWCLIENTSPAWN
+renderstyle translucent
+speed 18
++DONTSPLASH
+alpha 0.8
+radius 4
+height 4
++DOOMBOUNCE
+damage 0
++RIPPER
++NOBLOOD
+States
+{
+Spawn:
+SMOK ABCDEFGHIJKLMNOPQ 2
+Stop
+}
+}
+
 //Are these used?
 actor Minismokeeffect : Smokeeffect
 {
