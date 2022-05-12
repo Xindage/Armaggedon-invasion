@@ -1,12 +1,20 @@
 //Decorate data base for the spawners listed by dec.
 //Temporary, should be moved to its own class dec.
-//monbaron.dec start
+
+actor StrongvileSpot : CustomMonsterInvasionSpot 12343
+{
+//DropItem "Exile", 256, 86
+DropItem "Diabolist", 256, 62
+DropItem "DarkHellion", 256, 28
+DropItem "Summoner", 256, 10
+}
 
 actor BruiserSpot : CustomMonsterInvasionSpot 12340
 {
 DropItem BruiserDemon
 }
 
+/*
 actor ZombieMarineSpot : CustomMonsterInvasionSpot 12342
 {
 DropItem ZombieMarine
@@ -16,6 +24,7 @@ actor SmallermastermindSpot : CustomMonsterInvasionSpot 12364
 {
 DropItem Smallermastermind
 }
+*/
 
 actor CybruiserSentrySpot : CustomMonsterInvasionSpot 12363
 {

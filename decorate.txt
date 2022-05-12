@@ -1,4 +1,5 @@
 // -- Misc
+#INCLUDE "decorate/stdata.dec"
 #INCLUDE "decorate/custon.dec"
 #INCLUDE "decorate/decorations.dec"
 #INCLUDE "decorate/raindata.dec"

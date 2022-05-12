@@ -1,0 +1,49 @@
+// ST Weapons
+ACTOR "CompatMinigun" : RandomSpawner replaces minigun
+{DropItem "Minigun "}
+ACTOR "CompatGrenadeLauncher" : RandomSpawner replaces GrenadeLauncher
+{DropItem "Grenade Launcher"}
+ACTOR "CompatRailgun" : RandomSpawner replaces RailGun
+{DropItem "Railgun "}
+ACTOR "CompatBFG10K" : RandomSpawner replaces BFG10K
+{DropItem "BFG10K "}
+
+// ST Armor/Health
+// "Compat issue" Note: Since both ST and CD have the same named RedArmor.
+ACTOR CompatMaxHealthBonus : RandomSpawner replaces MaxHealthBonus
+{DropItem "NewMaxHealthBonus"}
+ACTOR CompatMaxArmorBonus : RandomSpawner replaces MaxArmorBonus
+{DropItem "NewMaxArmorBonus"}
+
+// ST Monsters
+// New spawners still needed for Cacolantern, Abaddon, and Belphegor.
+// Randon monsters add-on can be a good option here.
+
+ACTOR CompatSuperShotgunZombieSpawner : RandomSpawner Replaces SuperShotgunGuy
+{
+DropItem "SuperShotgunZombie", 256, 75
+DropItem "QuadShotgunZombie", 256, 25
+}
+
+ACTOR CompatDarkImpSpawner : RandomSpawner Replaces DarkImp
+{
+DropItem "VoidImp", 256, 60
+DropItem "PhaseImp", 256, 28
+DropItem "Devil", 256, 12
+}
+
+ACTOR CompatBloodDemonSpawner : RandomSpawner Replaces BloodDemon
+{
+DropItem "CyberFiend", 256, 48
+DropItem "BullFiend", 256, 30
+DropItem "MagmaFiend", 256, 16
+DropItem "DTechFiend", 256, 6
+}
+
+ACTOR CompatHectebusSpawner : RandomSpawner Replaces Hectebus
+{
+DropItem "Daedabus", 256, 52
+DropItem "Behemoth", 256, 24
+DropItem "Barbatos", 256, 12
+DropItem "Mancubus~", 256, 12
+}
