@@ -1,4 +1,4 @@
-TODO: Separate each monsters and projectiles of each class.
+// TODO: Separate each monsters and projectiles of each class.
 //===========================================================================
 //
 // Duke Nuken 3D Sounds
