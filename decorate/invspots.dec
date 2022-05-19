@@ -1,18 +1,107 @@
-//Decorate data base for the spawners listed by dec.
-//Temporary, should be moved to its own class dec.
+//Decorate data base for custon spawners listed by dec.
 
-actor StrongvileSpot : CustomMonsterInvasionSpot 12343
+// --->
+// Zandronum base replacers
+// Some complex doom spawner use a different method to place monster
+// So you can prevent them from spawming by staying on the spot
+// This fix allow monsters to spawm properly.
+// --->
+
+ACTOR ArmZombiemanSpot : CustomMonsterInvasionSpot Replaces ZombieManSpot
 {
-//DropItem "Exile", 256, 86
-DropItem "Diabolist", 256, 62
-DropItem "DarkHellion", 256, 28
-DropItem "Summoner", 256, 10
+DropItem "PlasmaGunner", 256, 60
+DropItem "RailGunner", 256, 28
+DropItem "DemonTechZombie", 256, 8
+DropItem "RocketZombie", 256, 4
+DropItem "Marauder", 256, 1
 }
 
-actor BruiserSpot : CustomMonsterInvasionSpot 12340
+ACTOR ArmShotgunZombieSpot : CustomMonsterInvasionSpot Replaces ShotgunGuySpot
 {
-DropItem BruiserDemon
+DropItem "ShotgunZombie", 256, 52
+DropItem "AssaultShotgunZombie", 256, 28
+DropItem "SuperShotgunZombie", 256, 16
+DropItem "QuadShotgunZombie", 256, 4
+DropItem "Marauder", 256, 1
 }
+
+ACTOR ArmChainZombieSpot : CustomMonsterInvasionSpot Replaces ChaingunGuySpot
+{
+DropItem "AssaultRifleZombie", 256, 54
+DropItem "Chaingunner", 256, 28
+DropItem "Minigunner", 256, 14
+DropItem "BFGZombieman", 256, 4
+DropItem "Marauder", 256, 1
+}
+
+ACTOR ArmCacodemonSpot : CustomMonsterInvasionSpot replaces CacodemonSpot
+{
+    DropItem "Cacodemon~", 256, 67
+    DropItem "Agathodemon", 256, 13
+    DropItem "Watcher", 256, 9
+    DropItem "CacoLich", 256, 6
+    DropItem "Cacomental", 256, 4
+    DropItem "Abaddon", 256, 1
+}
+
+ACTOR ArmFatsoSpot : CustomMonsterInvasionSpot replaces FatsoSpot
+{
+	DropItem "Mancubus~" 256, 83
+	DropItem "Daedabus" 256, 10
+	DropItem "Behemoth" 256, 5
+	DropItem "Barbatos" 256, 2
+}
+
+ACTOR ArmArachnotronSpot : CustomMonsterInvasionSpot replaces ArachnotronSpot
+{
+	DropItem "Dualachnotron" 256, 83
+	DropItem "Fusionite" 256, 10
+	DropItem "BabyDemolisher" 256, 5
+	DropItem "BabySentient" 256, 2
+}
+
+ACTOR ArmBaronOfHellSpot : CustomMonsterInvasionSpot replaces BaronOfHellSpot
+{
+	DropItem "BaronOfHell~" 256, 85
+	DropItem "BruiserDemon" 256, 9
+	DropItem "Cybruiser" 256, 4
+	DropItem "Terminator~" 256, 2
+}
+
+ACTOR ArmCyberdemonSpot : CustomMonsterInvasionSpot replaces CyberdemonSpot
+{
+	DropItem "CyberLord" 256, 84
+	DropItem "DarkCyberdemon" 256, 10
+	DropItem "Cardinal" 256, 6
+}
+
+ACTOR ArmSpiderMastermindSpot : CustomMonsterInvasionSpot replaces SpiderMastermindSpot
+{
+	DropItem "Demolisher" 82
+	DropItem "DarkDemolisher" 11
+	DropItem "CerebralSentient" 7
+}
+
+// --->
+// Strong spawners
+// Used to ensure hard or diferent monsters sets.
+// --->
+
+actor StrongVileSpot : CustomMonsterInvasionSpot 12343
+{
+	DropItem "Diabolist", 256, 62
+	DropItem "DarkHellion", 256, 28
+	DropItem "Summoner", 256, 10
+}
+
+actor StrongNobleSpot : CustomMonsterInvasionSpot 12340
+{
+	DropItem "PyroDemon", 256, 72
+	DropItem "HellDuke" 256, 18
+	DropItem "BruiserDemon", 256, 10
+	DropItem "Terminator~" 256, 3
+}
+
 
 /*
 actor ZombieMarineSpot : CustomMonsterInvasionSpot 12342

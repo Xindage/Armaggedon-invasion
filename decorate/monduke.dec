@@ -6,6 +6,7 @@
 // --->
 ACTOR Pigcop 7068
 {
+	Tag "L.A.R.D Officer"
 	Health 110
 	Radius 28
 	Height 56
