@@ -19,7 +19,7 @@
 // rain drops, as exampled with a later entry
 //
 
-ACTOR RainDrop 24600
+ACTOR RainDrop
 {
 	Radius 8
 	Height 1
@@ -43,7 +43,7 @@ ACTOR RainDrop 24600
 	}
 }
 
-ACTOR RainDrop2 24602
+ACTOR RainDrop2
 {
 	Radius 12
 	Height 1
@@ -68,7 +68,7 @@ ACTOR RainDrop2 24602
 	}
 }
 
-ACTOR RainBase 24601
+ACTOR RainBase
 {
 	Radius 16
 	Height 6
@@ -91,7 +91,7 @@ ACTOR RainBase 24601
 }
 
 
-ACTOR SnowFlake : RainDrop 24603
+ACTOR SnowFlake : RainDrop
 {
 	Scale 0.3
 	+NOGRAVITY // No gravity so we can control its fall speed with ThrustThingZ

@@ -5,6 +5,7 @@
 // --->
 actor SkeletonArcher
 {
+	Tag "Skeleton Archer"
 	Health 90
 	Radius 20
 	Height 56
@@ -100,6 +101,7 @@ ACTOR ArrowFire
 // --->
 ACTOR Brute
 {
+	Tag "Brute"
 	Health 280
 	Radius 32
 	Height 72
@@ -207,6 +209,7 @@ ACTOR Brutefx2 : Brutefx1
 // --->
 actor GolemRider
 {
+	Tag "Golem Rider"
 	Health 1000
 	Radius 20
 	Height 80
@@ -384,6 +387,7 @@ actor Hornattackinventory : CustomInventory
 // --->
 actor Anubis
 {
+	Tag "Anubis"
 	Height 120
 	Radius 30
 	Scale 0.37
@@ -552,6 +556,7 @@ actor AnubisTracer
 
 ACTOR Eyesore 
 {
+	Tag "Eyesore"
 	Health 2000
 	Radius 13
 	Height 35

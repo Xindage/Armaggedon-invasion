@@ -8,8 +8,8 @@ ACTOR "CompatRailgun" : RandomSpawner replaces RailGun
 ACTOR "CompatBFG10K" : RandomSpawner replaces BFG10K
 {DropItem "BFG10K "}
 
-// ST Armor/Health
-// "Compat issue" Note: Since both ST and CD have the same named RedArmor.
+// Armor/Health
+// Note: Both ST and CD have the same item named RedArmor, but CD is used instead.
 ACTOR CompatMaxHealthBonus : RandomSpawner replaces MaxHealthBonus
 {DropItem "NewMaxHealthBonus"}
 ACTOR CompatMaxArmorBonus : RandomSpawner replaces MaxArmorBonus
@@ -17,7 +17,7 @@ ACTOR CompatMaxArmorBonus : RandomSpawner replaces MaxArmorBonus
 
 // ST Monsters
 // New spawners still needed for Cacolantern, Abaddon, and Belphegor.
-// Randon monsters add-on can be a good option here.
+// We should slowly remove this dependency of skulltag, mostly for compatibility.
 
 ACTOR CompatSuperShotgunZombieSpawner : RandomSpawner Replaces SuperShotgunGuy
 {

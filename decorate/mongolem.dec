@@ -3,8 +3,11 @@
 // --->
 // Changed the rocket ammo usage by golem tokens, I hope that fix it's bugged
 // behavior.
+// Todo: Revise the projectiles section and do some cleanup.
+
 actor StoneGolem
 {
+	Tag "Stone Golem"
 	Health 15000
 	Radius 100
 	Height 760
@@ -145,6 +148,7 @@ actor Golemdeathspawnfx2 // Seems Unused
 		Stop
 	}
 }
+
 actor Launchcheck // What is the use of it?
 {
 	damagetype "Launch"
@@ -442,5 +446,8 @@ Stop
 }
 }
 
+// --->
+// Invasion Spawn Spots
+// --->
 actor StoneGolemSpot : CustomMonsterInvasionSpot 12354
 {DropItem StoneGolem}

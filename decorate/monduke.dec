@@ -1,10 +1,12 @@
 //Decorate data base of monsters based on DukeNuken 3d.
 //Alpha status: Complete.
+//Tags added for HPBar compatibility.
+//Todo: Missing credits.
 
 // --->
 // PigCop | c: Inuyasha_989
 // --->
-ACTOR Pigcop 7068
+ACTOR Pigcop
 {
 	Tag "L.A.R.D Officer"
 	Health 110
@@ -63,8 +65,9 @@ ACTOR Pigcop 7068
 // --->
 // Enforcer
 // --->
-ACTOR Enforcer 7065 
+ACTOR Enforcer
 {
+	Tag "Enforcer"
 	Health 150
 	Radius 24
 	Height 50
@@ -113,8 +116,9 @@ ACTOR Enforcer 7065
 // --->
 // Octabrain
 // --->
-ACTOR Octabrain 7067
+ACTOR Octabrain
 {
+	Tag "Octabrain"
 	Health 170
 	Radius 20
 	Height 60
@@ -167,8 +171,9 @@ ACTOR Octabrain 7067
 // --->
 // Assault Commander
 // --->
-ACTOR AssaultCommander 7062
+ACTOR AssaultCommander
 {
+	Tag "Assault Commander"
 	Health 400
 	Radius 30
 	Height 30
@@ -225,8 +230,9 @@ ACTOR AssaultCommander 7062
 // --->
 // Battlelord
 // --->
-ACTOR Battlelord 7069
+ACTOR Battlelord
 {
+	Tag "Battlelord"
 	Health 5000
 	Radius 40
 	Height 190
@@ -290,8 +296,9 @@ ACTOR Battlelord 7069
 // --->
 // Overlord | c: Hellraiser and modified by Wario
 // --->
-ACTOR Overlord 7066
+ACTOR Overlord
 {
+	Tag "Overlord"
 	Health 7000
 	Radius 60
 	Height 110
@@ -351,8 +358,9 @@ ACTOR Overlord 7066
 // --->
 // Cycloid Emperor
 // --->
-ACTOR CycloidEmperor 7064 
+ACTOR CycloidEmperor
 {
+	Tag "Cycloid Emperor"
 	Health 8000
 	Radius 50
 	Height 120

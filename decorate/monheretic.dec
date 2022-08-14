@@ -7,6 +7,7 @@
 // --->
 ACTOR EnhancedKnight : Knight
 {
+	Tag "Undead Warrior"
 	Species "Undead"
 	+DONTHARMSPECIES
 	Health 260
@@ -104,6 +105,7 @@ ACTOR Hellsergeant : Knight
 
 ACTOR Disciple 
 { 
+	Tag "Disciple"
 	Health 300 
 	PainChance 140
 	Speed 8
@@ -274,6 +276,7 @@ ACTOR DSFX2
 
 ACTOR Deathknight
 {
+	Tag "Deathknight"
 	Health 400
 	Radius 24
 	Height 72
@@ -557,6 +560,7 @@ ACTOR RedPuff
 
 ACTOR Maulotaur : Minotaur
 {
+	Tag "Maulotaur"
 	MONSTER
 	-BOSSDEATH
 	-BOSS
@@ -566,7 +570,8 @@ ACTOR Maulotaur : Minotaur
 }
 
 ACTOR Avatar 30125 
-{ 
+{
+	Tag "Avatar"
 Health 6000
 PainChance 0
 Speed 15 
@@ -1104,8 +1109,8 @@ ACTOR DeathKnightSpawner : CustomMonsterInvasionSpot 13346
 ACTOR DiscipleSpawner : CustomMonsterInvasionSpot 12344
 {DropItem Disciple}
 
-ACTOR MinotaurDTFSpot : CustomMonsterInvasionSpot 15741
-{DropItem MinotaurDTF}
+ACTOR MaulotaurSpot : CustomMonsterInvasionSpot 15741
+{DropItem Maulotaur}
 
 ACTOR AvatarSpot : CustomMonsterInvasionSpot 15078
 {DropItem Avatar}

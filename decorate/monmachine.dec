@@ -7,6 +7,7 @@
 // --->
 ACTOR Reaver~ replaces Reaver
 {  
+	Tag "Reaver"
 	Health 150
 	Radius 20
 	Height 60
@@ -68,6 +69,7 @@ ACTOR Reaver~ replaces Reaver
 // --->
 ACTOR Crusader~ replaces Crusader
 {
+	Tag "Crusader"
 	Health 650
 	Radius 40
 	Height 56
@@ -169,7 +171,7 @@ ACTOR Crusader~ replaces Crusader
 // --->
 ACTOR Inquisitor~ : Inquisitor replaces Inquisitor
 {
-	Game Strife
+	Tag "Inquisitor"
 	Health 1000
 	Speed 12
 	Radius 40
@@ -254,6 +256,7 @@ ACTOR Inquisitor~ : Inquisitor replaces Inquisitor
 // --->
 actor LightningSentry
 {
+	Tag "Lightning Sentry"
 	Height 150
 	Radius 30
 	Health 1350
@@ -307,6 +310,7 @@ actor LightningSentry
 // --->
 Actor SDOrb
 {
+	Tag "S&D Orb"
 	MONSTER
 	Radius 31
 	Height 56
