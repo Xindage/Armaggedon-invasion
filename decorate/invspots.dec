@@ -1,114 +1,379 @@
-//Decorate data base for custon spawners listed by dec.
+// Decorate data base for custon spawners listed by dec.
+// I'll be using editors data from complex doom invasion invasion.
 
-// --->
-// Zandronum base replacers
-// Some complex doom spawner use a different method to place monster
-// So you can prevent them from spawming by staying on the spot
-// This fix allow monsters to spawm properly.
-// --->
-
-ACTOR ArmZombiemanSpot : CustomMonsterInvasionSpot Replaces ZombieManSpot
+ACTOR ArgRandomMonsterInvasionSpot : CustomMonsterInvasionSpot
 {
-DropItem "PlasmaGunner", 256, 60
-DropItem "RailGunner", 256, 28
-DropItem "DemonTechZombie", 256, 8
-DropItem "RocketZombie", 256, 4
-DropItem "Marauder", 256, 1
+//$Category "Vanilla Monsters Custom/Strong spots"
+//$Angled
+//$Arg0 "Start Spawn Number"
+//$Arg1 "Spawn Delay"
+//$Arg2 "Round Spawn Delay"
+//$Arg3 "First Appear Wave"
+//$Arg4 "Max Spawn"
 }
 
-ACTOR ArmShotgunZombieSpot : CustomMonsterInvasionSpot Replaces ShotgunGuySpot
+// Note: Invasion has no support for chance of drop, so i did this.
+// Original values may have changed slight to decrease the size of this decorete.
+
+ACTOR ArmZombieManSpot : CustomMonsterInvasionSpot Replaces ZombieManSpot
 {
-DropItem "ShotgunZombie", 256, 52
-DropItem "AssaultShotgunZombie", 256, 28
-DropItem "SuperShotgunZombie", 256, 16
-DropItem "QuadShotgunZombie", 256, 4
-DropItem "Marauder", 256, 1
+// P60 - R28 - D8 - R3 - M1
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner" DropItem "PlasmaGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner" DropItem "RailGunner"
+DropItem "DemonTechZombie" DropItem "DemonTechZombie" DropItem "DemonTechZombie" DropItem "DemonTechZombie"
+DropItem "DemonTechZombie" DropItem "DemonTechZombie" DropItem "DemonTechZombie" DropItem "DemonTechZombie"
+DropItem "RocketZombie" DropItem "RocketZombie" DropItem "RocketZombie"
+DropItem "Marauder"
 }
 
-ACTOR ArmChainZombieSpot : CustomMonsterInvasionSpot Replaces ChaingunGuySpot
+ACTOR ArmShotgunGuySpot : CustomMonsterInvasionSpot Replaces ShotgunGuySpot
 {
-DropItem "AssaultRifleZombie", 256, 54
-DropItem "Chaingunner", 256, 28
-DropItem "Minigunner", 256, 14
-DropItem "BFGZombieman", 256, 4
-DropItem "Marauder", 256, 1
+// SZ52 - AS28 - SSD16 - QZR3 - MA1
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie" DropItem "ShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie"
+DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie"
+DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie"
+DropItem "QuadShotgunZombie" DropItem "QuadShotgunZombie" DropItem "QuadShotgunZombie"
+DropItem "Marauder"
 }
 
-ACTOR ArmCacodemonSpot : CustomMonsterInvasionSpot replaces CacodemonSpot
+ACTOR ArmChaingunGuySpot : CustomMonsterInvasionSpot Replaces ChaingunGuySpot
 {
-    DropItem "Cacodemon~", 256, 67
-    DropItem "Agathodemon", 256, 13
-    DropItem "Watcher", 256, 9
-    DropItem "CacoLich", 256, 6
-    DropItem "Cacomental", 256, 4
-    DropItem "Abaddon", 256, 1
+// A54 - C28 - M14 - B3 - M1
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "AssaultRifleZombie" DropItem "AssaultRifleZombie"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner" DropItem "Chaingunner"
+DropItem "Minigunner" DropItem "Minigunner" DropItem "Minigunner" DropItem "Minigunner"
+DropItem "Minigunner" DropItem "Minigunner" DropItem "Minigunner" DropItem "Minigunner"
+DropItem "Minigunner" DropItem "Minigunner" DropItem "Minigunner" DropItem "Minigunner"
+DropItem "Minigunner" DropItem "Minigunner"
+DropItem "BFGZombieman" DropItem "BFGZombieman" DropItem "BFGZombieman"
+DropItem "Marauder"
 }
 
-ACTOR ArmFatsoSpot : CustomMonsterInvasionSpot replaces FatsoSpot
+ACTOR ArmImpSpot : CustomMonsterInvasionSpot Replaces ImpSpot
 {
-	DropItem "Mancubus~" 256, 83
-	DropItem "Daedabus" 256, 10
-	DropItem "Behemoth" 256, 5
-	DropItem "Barbatos" 256, 2
+// I60 - V26 - D10 - P4
+DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp"
+DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp"
+DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp"
+DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp"
+DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp" DropItem "Imp"
+DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp"
+DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp"
+DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp"
+DropItem "Devil" DropItem "Devil" DropItem "Devil" DropItem "Devil" DropItem "Devil"
+DropItem "PhaseImp" DropItem "PhaseImp"
+}
+
+ACTOR ArmDemonSpot : CustomMonsterInvasionSpot Replaces DemonSpot
+{
+// B66 - C24 - M8 - D4
+DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend"
+DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend"
+DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend"
+DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend"
+DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend"
+DropItem "BullFiend" DropItem "BullFiend" DropItem "BullFiend"
+DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend"
+DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend" DropItem "CyberFiend"
+DropItem "MagmaFiend" DropItem "MagmaFiend" DropItem "MagmaFiend" DropItem "MagmaFiend"
+DropItem "DTechFiend" DropItem "DTechFiend"
+}
+
+ACTOR ArmSpectreSpot : CustomMonsterInvasionSpot Replaces SpectreSpot
+{
+// SP70 - LU24 - MA8 - SD4
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~" DropItem "Spectre~"
+DropItem "Lurker" DropItem "Lurker" DropItem "Lurker" DropItem "Lurker" DropItem "Lurker" DropItem "Lurker"
+DropItem "Lurker" DropItem "Lurker" DropItem "Lurker" DropItem "Lurker" DropItem "Lurker" DropItem "Lurker"
+DropItem "MagmaSpook" DropItem "MagmaSpook" DropItem "MagmaSpook" DropItem "MagmaSpook"
+DropItem "SpectralDTechFiend" DropItem "SpectralDTechFiend"
+}
+
+ACTOR ArmLostSoulSpot : CustomMonsterInvasionSpot Replaces LostSoulSpot
+{
+// T60 - F24 - P10 - R6
+DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul"
+DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul"
+DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul"
+DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul"
+DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul" DropItem "TerrorSoul"
+DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne"
+DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne" DropItem "ForgottenOne"
+DropItem "PoisonSoul" DropItem "PoisonSoul" DropItem "PoisonSoul" DropItem "PoisonSoul" DropItem "PoisonSoul"
+DropItem "Rictus" DropItem "Rictus" DropItem "Rictus"
+}
+
+ACTOR ArmCacodemonSpot : CustomMonsterInvasionSpot Replaces CacodemonSpot
+{
+// Original: CD80 - WA10 - CM6 - AB4
+// Armageddon: CD62 - AG16 - WA10 - CL6 - CM4 - AB2
+DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~"
+DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~"
+DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~"
+DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~"
+DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~" DropItem "Cacodemon~"
+DropItem "Cacodemon~"
+DropItem "Agathodemon" DropItem "Agathodemon" DropItem "Agathodemon" DropItem "Agathodemon"
+DropItem "Agathodemon" DropItem "Agathodemon" DropItem "Agathodemon" DropItem "Agathodemon"
+DropItem "Watcher" DropItem "Watcher" DropItem "Watcher" DropItem "Watcher" DropItem "Watcher"
+DropItem "CacoLich" DropItem "CacoLich" DropItem "CacoLich"
+DropItem "Cacomental" DropItem "Cacomental"
+DropItem "Abaddon"
+}
+
+ACTOR ArmPainElementalSpot : CustomMonsterInvasionSpot Replaces PainElementalSpot
+{
+// S80 - D10 - P6 - B4
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper" DropItem "SoulKeeper"
+DropItem "Defiler" DropItem "Defiler" DropItem "Defiler" DropItem "Defiler" DropItem "Defiler"
+DropItem "PoisonElemental" DropItem "PoisonElemental" DropItem "PoisonElemental"
+DropItem "BombElemental" DropItem "BombElemental"
 }
 
 ACTOR ArmArachnotronSpot : CustomMonsterInvasionSpot replaces ArachnotronSpot
 {
-	DropItem "Dualachnotron" 256, 83
-	DropItem "Fusionite" 256, 10
-	DropItem "BabyDemolisher" 256, 5
-	DropItem "BabySentient" 256, 2
+// Chances in original cd are so low, why?
+// Original: MA99.86 - DA0.1 - BE0.04 - BA0.02
+// Changed: DA84 - FU10 - BD4 - BS2
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron" DropItem "Dualachnotron"
+DropItem "Fusionite" DropItem "Fusionite" DropItem "Fusionite" DropItem "Fusionite" DropItem "Fusionite"
+DropItem "BabyDemolisher" DropItem "BabyDemolisher"
+DropItem "BabySentient"
+}
+
+ACTOR ArmFatsoSpot : CustomMonsterInvasionSpot replaces FatsoSpot
+{
+// Chances in original cd are so low, why?
+// Original: MA99.86 - DA0.1 - BE0.04 - BA0.02
+// Changed: MA84 - DA10 - BE4 - BA2
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~" DropItem "Mancubus~"
+DropItem "Daedabus" DropItem "Daedabus" DropItem "Daedabus" DropItem "Daedabus" DropItem "Daedabus"
+DropItem "Behemoth" DropItem "Behemoth"
+DropItem "Barbatos"
+}
+
+ACTOR ArmRevenantSpot : CustomMonsterInvasionSpot Replaces RevenantSpot
+{
+// G80 - C10 - H6 - F4
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Guardian" DropItem "Guardian" DropItem "Guardian" DropItem "Guardian"
+DropItem "Cadaver" DropItem "Cadaver" DropItem "Cadaver" DropItem "Cadaver" DropItem "Cadaver"
+DropItem "HellfireRevenant" DropItem "HellfireRevenant" DropItem "HellfireRevenant"
+DropItem "Famine" DropItem "Famine"
+}
+
+ACTOR ArmHellKnightSpot : CustomMonsterInvasionSpot Replaces HellKnightSpot
+{
+// HK80 - PD10 - CN6 - HD4
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~" DropItem "HellKnight~"
+DropItem "PyroDemon" DropItem "PyroDemon" DropItem "PyroDemon" DropItem "PyroDemon" DropItem "PyroDemon"
+DropItem "CyberNoble" DropItem "CyberNoble" DropItem "CyberNoble"
+DropItem "HellDuke" DropItem "HellDuke"
 }
 
 ACTOR ArmBaronOfHellSpot : CustomMonsterInvasionSpot replaces BaronOfHellSpot
 {
-	DropItem "BaronOfHell~" 256, 85
-	DropItem "BruiserDemon" 256, 9
-	DropItem "Cybruiser" 256, 4
-	DropItem "Terminator~" 256, 2
+// Chances in original cd are so low, why?
+// Original: Not feeling it right now.
+// BH84 - BD10 - CB4 - TE2
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~" DropItem "BaronOfHell~"
+DropItem "BruiserDemon" DropItem "BruiserDemon" DropItem "BruiserDemon" DropItem "BruiserDemon" DropItem "BruiserDemon"
+DropItem "Cybruiser" DropItem "Cybruiser"
+DropItem "Terminator~"
 }
 
-ACTOR ArmCyberdemonSpot : CustomMonsterInvasionSpot replaces CyberdemonSpot
+ACTOR ArmArchvileSpot: CustomMonsterInvasionSpot Replaces ArchvileSpot
 {
-	DropItem "CyberLord" 256, 84
-	DropItem "DarkCyberdemon" 256, 10
-	DropItem "Cardinal" 256, 6
+// EX86 - DI8 - DH4 - SU2
+DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile"
+DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile"
+DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile"
+DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile"
+DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile" DropItem "Exile"
+DropItem "Exile" DropItem "Exile" DropItem "Exile"
+DropItem "Diabolist" DropItem "Diabolist" DropItem "Diabolist" DropItem "Diabolist"
+DropItem "DarkHellion" DropItem "DarkHellion"
+DropItem "Summoner"
 }
 
 ACTOR ArmSpiderMastermindSpot : CustomMonsterInvasionSpot replaces SpiderMastermindSpot
 {
-	DropItem "Demolisher" 82
-	DropItem "DarkDemolisher" 11
-	DropItem "CerebralSentient" 7
+// Chances in original cd are so low, why?
+// Original: Not feeling it right now.
+// DE80 - DD12 - CS8
+DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher"
+DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher"
+DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher"
+DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher" DropItem "Demolisher"
+DropItem "DarkDemolisher" DropItem "DarkDemolisher" DropItem "DarkDemolisher"
+DropItem "CerebralSentient" DropItem "CerebralSentient"
+}
+
+ACTOR ArmCyberdemonSpot : CustomMonsterInvasionSpot replaces CyberdemonSpot
+{
+// Chances in original cd are so low, why?
+// Original: Not feeling it right now.
+// CD84 - DC10 - CA6
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord" DropItem "CyberLord"
+DropItem "DarkCyberdemon" DropItem "DarkCyberdemon" DropItem "DarkCyberdemon" DropItem "DarkCyberdemon" DropItem "DarkCyberdemon"
+DropItem "Cardinal" DropItem "Cardinal" DropItem "Cardinal"
 }
 
 // --->
-// Strong spawners
+// Custon/Strong spawners
 // Used to ensure hard or diferent monsters sets.
 // --->
 
-actor StrongVileSpot : CustomMonsterInvasionSpot 12343
+actor StrongZonbieSpot : ArgRandomMonsterInvasionSpot 12342
 {
-	DropItem "Diabolist", 256, 62
-	DropItem "DarkHellion", 256, 28
-	DropItem "Summoner", 256, 10
+//$Title Strong Zombie Spot
+//$Sprite ZSP3A2A8
+DropItem "DemonTechZombie" DropItem "DemonTechZombie" DropItem "DemonTechZombie" DropItem "DemonTechZombie"
+DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie" DropItem "SuperShotgunZombie"
+DropItem "QuadShotgunZombie" DropItem "QuadShotgunZombie" DropItem "QuadShotgunZombie"
+DropItem "AssaultShotgunZombie" DropItem "AssaultShotgunZombie"
+DropItem "Minigunner" DropItem "Minigunner"
+DropItem "RocketZombie"
+DropItem "BFGZombieman"
 }
 
-actor StrongNobleSpot : CustomMonsterInvasionSpot 12340
+actor StrongImpSpot : ArgRandomMonsterInvasionSpot 15070
 {
-	DropItem "PyroDemon", 256, 72
-	DropItem "HellDuke" 256, 18
-	DropItem "BruiserDemon", 256, 10
-	DropItem "Terminator~" 256, 3
+//$Title Strong Imp Spot
+//$Sprite DIMPA2C8
+DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp" DropItem "VoidImp"
+DropItem "Devil" DropItem "Devil"
+DropItem "PhaseImp"
+}
+
+actor StrongVileSpot : ArgRandomMonsterInvasionSpot 12343
+{
+//$Title Strong Archvile Spot
+//$Sprite DIABA2D8
+DropItem "Diabolist" DropItem "Diabolist" DropItem "Diabolist" DropItem "Diabolist"
+DropItem "DarkHellion" DropItem "DarkHellion"
+DropItem "Summoner"
+}
+
+actor StrongNobleSpot : ArgRandomMonsterInvasionSpot 12340
+{
+//$Title Strong Nobles Spot
+//$Sprite HDUKA2C8
+DropItem "PyroDemon" DropItem "PyroDemon" DropItem "PyroDemon"
+DropItem "HellDuke"
+DropItem "BruiserDemon" DropItem "BruiserDemon" DropItem "BruiserDemon"
+DropItem "Terminator~"
 }
 
 
 /*
-actor ZombieMarineSpot : CustomMonsterInvasionSpot 12342
-{
-DropItem ZombieMarine
-}
-
 actor SmallermastermindSpot : CustomMonsterInvasionSpot 12364
 {
 DropItem Smallermastermind
@@ -123,11 +388,6 @@ DropItem Cybruiser
 actor LightningcoreSpot : CustomMonsterInvasionSpot 12365
 {
 DropItem Lightningcore
-}
-
-actor HarvesterSpot : CustomMonsterInvasionSpot 15070
-{
-DropItem SoulHarvester
 }
 
 actor JitterSpot : CustomMonsterInvasionSpot 12349
