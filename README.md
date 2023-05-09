@@ -1,50 +1,50 @@
-Project complex armageddon invasion 2
+Project Complex Armageddon Invasion 2
 
 About:
-This is a unofficial edit of the mod Armaggedon invasion 2, all data contained 
-here use ALL or Parcial data from armageddon2v63.pk3 there's no intention from 
-my side (Xindage) to steal credits from their work on that.
+This is an unofficial edit of the mod Armageddon Invasion 2. All data contained
+here uses all or partial data from armageddon2v63.pk3. There is no intention on
+my part (Xindage) to steal credit for their work.
 
 Copyright:
-My Attempt on finding the authors failed, my contact with CutManMike via e-mail 
-wanst asnwered. Original armageddon2v63 credits is included whitin the files of 
-this github repository in credits.txt intact to be consulted.
+I attempted to find the authors but was unsuccessful. My email to CutManMike
+was not answered. The original Armageddon2v63 credits are included within the
+files of this Github repository in the credits.txt file, which remains intact
+for consultation.
 
 Target:
-This project is aimed in both fixing, improving and making it compatible with 
-complex doom as an add-on for 27a5.
-If possible too update the present armaggedon monsters to fit in the complex 
-doom theme, having brightmaps for example.
+This project aims to fix, improve, and make Armageddon Invasion 2 compatible
+with Complex Doom as an add-on for version 27b2. If possible, I also aim to
+update the present Armageddon monsters to fit in with the Complex Doom theme,
+including brightmaps.
 
 Why Complex Doom:
-This mod is widely used in zandronum multiplayer and after doing a small 
-patch to make both work togheter, the players reacted positively to that.
-About my choice on using the version 27a5 for that, is because it's the most 
-recent version of complex, which add updated features and has less chance of 
-being outdated.
+This mod is widely used in Zandronum multiplayer, and after creating a small
+patch to make both mods work together, the players reacted positively. I chose
+version 27b2 because it is the most recent version of Complex Doom, which
+includes updated features and has less chance of being outdated.
 
-Armaggedon status:
-This project seems to be not in development for the original authors for years, 
-and a project with such quality it's getting OLD in a bad way, glitchs started 
-to appear and some waves break badly at point of soft locking the map or 
-crashining the server, diabolist attack for example.
+Armageddon Status:
+This project seems to have not been in development by the original authors for
+years, and a project with such quality is getting old in a bad way. Glitches
+have started to appear, and some waves break badly, to the point of soft-locking
+the map or crashing the server, such as the Diabolist attack who instant crash
+the servers.
 
 Signal 11 Crash:
-So far Zandronum team has a opened ticket on it but i think that i found the 
-source of this glitch, being the random sphere behaviour in complex doom, that 
-is why the server crash, so for now this sphere will be banished from the maps 
-until zandronum team finds a solution.
-Check https://zandronum.com/tracker/view.php?id=3415 for more details about it.
+So far, the Zandronum team has an open ticket on this issue, but I believe I
+have found the source of the glitch. The random sphere behavior in Complex Doom
+is causing the server to crash. Therefore, for now, this sphere will be banished
+from the maps until the Zandronum team finds a solution. Please check
+https://zandronum.com/tracker/view.php?id=3415 for more details about this.
 
-About me:
-I'm basically a mapper, i do know decorate and scripting well enough to 
+About Me:
+I'm basically a mapper, and I know enough about Decorate and scripting to
 understand and edit them properly.
 
 Thanks:
-Thanks for Wario, Moti and CutmanMike and everyone else included for doing this 
-awsome mod.
+Thanks to Wario, Moti, CutmanMike, and everyone else involved for creating this
+awesome mod.
 
 Release:
-There's no stable or beta release of this project yet.
-The compat fix works with the Signal 11 crash still present and i'll not update 
-that file anymore. Please be patient for a beta release.
+There is no stable or beta release of this project yet, but I am working to make
+it stable as soon as possible.
