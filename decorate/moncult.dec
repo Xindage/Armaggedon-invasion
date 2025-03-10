@@ -2,6 +2,8 @@
 
 ACTOR Thrall
 {
+	Tag "Warlock Cultist"
+	Species "Cultists"
 	Health 100
 	PainChance 10
 	Speed 8
@@ -12,6 +14,7 @@ ACTOR Thrall
 	+FLOORCLIP
 	+DONTHURTSPECIES
 	-NOGRAVITY
+	+DONTHARMSPECIES
 	translation "116:124=176:185"
 	-FLOAT
 	Obituary "%o was killed by a Warlock Cultist."
@@ -53,6 +56,8 @@ ACTOR Thrall
 
 ACTOR Thrall2
 {
+	Tag "Warlock Cultist"
+	Species "Cultists"
 	Health 100
 	PainChance 10
 	Speed 8 
@@ -169,6 +174,8 @@ ACTOR ThrallShot1
 
 actor GreyCultist 
 {
+	Tag "Grey Cultist"
+	Species "Cultists"
 	decal ZBloodBulletChip1
 	obituary "%o was made hole-y by a Grey cultist."
 	health 100
@@ -188,6 +195,7 @@ actor GreyCultist
 	+FLOORCLIP
 	+DONTHURTSPECIES
 	+NOSPLASHALERT
+	+DONTHARMSPECIES
 	states
 	{
 	Spawn:
@@ -198,7 +206,7 @@ actor GreyCultist
 		BCUL BBBBBBBBB 1 A_Chase
 		BCUL CCCCCCCCC 1 A_Chase
 		BCUL DDDDDDDDD 1 A_Chase
-		BCUL "\\\\\\\\" 1 A_Chase
+		BCUL PPPPPPPPP 1 A_Chase
 		loop
 	Missile:
 		BCUL A 0 A_FaceTarget
@@ -227,6 +235,7 @@ actor GreyCultist
 
 actor BlueCultist : GreyCultist
 {
+	Tag "Blue Cultist"
 	obituary "%o was blasted into bits by a blue cultist."
 	translation "112:127=200:207"
 	attacksound DSCU2ATK
@@ -267,6 +276,7 @@ actor Rocketzwei
 
 actor YellowCultist : GreyCultist
 {
+	Tag "Yellow Cultist"
 	obituary "%o was set on fire by a Yellow cultist."
 	translation "112:127=160:167"
 	attacksound DSCU2ATK
@@ -312,6 +322,8 @@ actor Flameshot
 
 actor GreenCultist 
 {
+	Tag "Green Cultist"
+	Species "Cultists"
 	decal ZBloodBulletChip1
 	obituary "%o was blasted into pieces by a Green cultist."
 	health 100
@@ -328,6 +340,7 @@ actor GreenCultist
 	+FLOORCLIP
 	+DONTHURTSPECIES
 	+NOSPLASHALERT 
+	+DONTHARMSPECIES
 	Scale 0.6
 	states
 	{
@@ -339,7 +352,7 @@ actor GreenCultist
 		BCUL BBBBBBBBB 1 A_Chase
 		BCUL CCCCCCCCC 1 A_Chase
 		BCUL DDDDDDDDD 1 A_Chase
-		BCUL "\\\\\\\\" 1 A_Chase
+		BCUL PPPPPPPPP 1 A_Chase
 		loop
 	Missile:
 		BCUL X 5 A_FaceTarget
@@ -369,6 +382,8 @@ actor GreenCultist
 
 actor RedCultist
 {
+	Tag "Red Cultist"
+	Species "Cultists"
 	decal ZBloodBulletChip1
 	obituary "%o was punctured by a Red cultist."
 	health 100
@@ -384,7 +399,8 @@ actor RedCultist
 	MONSTER
 	+FLOORCLIP
 	+DONTHURTSPECIES
-	+NOSPLASHALERT 
+	+NOSPLASHALERT
+	+DONTHARMSPECIES
 	translation "112:127=32:47"
 	Scale 0.6
 	states
@@ -397,7 +413,7 @@ actor RedCultist
 		BCUL BBBBBBBBB 1 A_Chase
 		BCUL CCCCCCCCC 1 A_Chase
 		BCUL DDDDDDDDD 1 A_Chase
-		BCUL "\\\\\\\\" 1 A_Chase
+		BCUL PPPPPPPPP 1 A_Chase
 		loop
 	Missile:
 		BCUL E 10 A_FaceTarget
@@ -591,6 +607,7 @@ actor FloorKaboom
 //Boss
 actor BigCultist : GreyCultist 
 {
+	Tag "Cultist Lord"
 	obituary "%o was blasted by the Cultist Lord."
 	health 8000
 	radius 54
@@ -600,6 +617,7 @@ actor BigCultist : GreyCultist
 	scale 1.8
 	speed 10
 	painchance 0
+	Species "Cultists"
 	seesound "shotgut/sight"
 	attacksound "shotgur/attack"
 	painsound "shotgut/pain"
@@ -610,7 +628,7 @@ actor BigCultist : GreyCultist
 	Missile:
 		BCUL A 0 A_FaceTarget
 		BCUL E 2 A_FaceTarget
-		BCUL F 3 bright A_CustomMissile("Rocket", 93, 18, 0)
+		BCUL F 3 bright A_CustomMissile("CyberLordRocket", 93, 18, 0)
 		BCUL E 0 A_CPosRefire
 		goto Missile
 	}

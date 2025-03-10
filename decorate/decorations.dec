@@ -1,6 +1,6 @@
 Plant
 { 
-	DoomEdNum 21031
+	DoomEdNum 21035 // old 21031
 	Sprite PLT1
 	scale 1.5
 	Solid
@@ -11,7 +11,7 @@ Plant
 
 Plant2
 { 
-	DoomEdNum 21032
+	DoomEdNum 21036 // old 21032
 	Sprite PLT2
 	scale 1.5
 	Solid

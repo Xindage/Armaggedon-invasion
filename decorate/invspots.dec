@@ -420,20 +420,29 @@ actor CyberBelphegorSpot : CustomMonsterInvasionSpot 15105
 DropItem CyberBelphegor
 }
 
+// Map 10 Nazi Stuff.
 actor DogSpot : CustomMonsterInvasionSpot 15106
 {
-DropItem Dog
+DropItem "NaziDog"
 }
 
-actor BlueNaziSpot : CustomMonsterInvasionSpot 15107
+actor BasicNaziSpot : CustomMonsterInvasionSpot 15108
 {
-DropItem BlueNazi
+DropItem "Guard" DropItem "Guard"
+DropItem "SSNazi"
 }
 
-actor BrownNaziSpot : CustomMonsterInvasionSpot 15108
+actor StrongNaziSpot : CustomMonsterInvasionSpot 15107
 {
-DropItem BrownNazi
+DropItem "Officer" DropItem "Officer"
+DropItem "Mutant"
 }
+
+actor HitlerSpot : CustomMonsterInvasionSpot 15743
+{
+    DropItem "Hitler"
+}
+// Map10 nazi end.
 
 actor DoomImp2Spot : CustomMonsterInvasionSpot 15109
 {
