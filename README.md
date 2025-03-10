@@ -37,6 +37,13 @@ is causing the server to crash. Therefore, for now, this sphere will be banished
 from the maps until the Zandronum team finds a solution. Please check
 https://zandronum.com/tracker/view.php?id=3415 for more details about this.
 
+About the wave skips:
+I've found the root cause of the wave skips, it happens manly on scripted waves
+they spawn monsters and keep the count of how many is alive by keeping the tracker
+of its TIDs and it "works" by itself, but complex doom randomized the spawns by
+custom monsters spawns, this make its actors to lose its original TIDs and so the
+monster counter fails and break\skip the script sequence.
+
 About Me:
 I'm basically a mapper, and I know enough about Decorate and scripting to
 understand and edit them properly.

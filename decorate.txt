@@ -7,7 +7,7 @@
 
 // -- Monsters
 #INCLUDE "decorate/mondoom.dec"
-//#INCLUDE "decorate/monbarons.dec"
+#INCLUDE "decorate/monbarons.dec"
 #INCLUDE "decorate/monduke.dec"
 #INCLUDE "decorate/monmachine.dec"
 #INCLUDE "decorate/moncult.dec"
